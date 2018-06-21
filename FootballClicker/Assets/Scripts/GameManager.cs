@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour {
     private void Awake()
     {
         // Instance of game manager start.
-        // This will make the game manager a singleton and callable by any script that is needed.
         if(_instance == null)
         {
             _instance = this;
@@ -35,7 +34,6 @@ public class GameManager : MonoBehaviour {
         _highscore = PlayerPrefs.GetInt("Highscore");       // Gets the current saved highscore and stores it in the variable.
     }
 
-    // This function will be used to 
     public void SaveHighScore(int num)
     {
         if(PlayerPrefs.GetInt("Highscore") < num)
@@ -43,12 +41,10 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetInt("Highscore", num);
             _highscore = num;
 
-            Debug.Log("Score updated");
-            Debug.Log(num);
+            Debug.Log("Score updated to "+ num);
         }
     }
 
-    // This function will be used to return the current highscore when needed.
     public int ReturnHighScore()
     {
         return _highscore;
