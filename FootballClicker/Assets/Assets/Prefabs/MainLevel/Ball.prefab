@@ -71,7 +71,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1917092816229494}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 968019c73112b4a42b5f4fc25375d719, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -89,7 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9df67b4cadb52479112613be096ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballImpulse: {x: 0, y: 10}
+  _uiCanvas: {fileID: 0}
+  _ballImpulseUp: {x: 0, y: 10}
+  _ballImpulseDown: {x: 0, y: -10}
+  _physicsHasBounce: {fileID: 6200000, guid: 968019c73112b4a42b5f4fc25375d719, type: 2}
+  _physicsNoBounce: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
 --- !u!212 &212272975418778304
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 
     // Private variables
     private int _highscore;      // This will be used to store the current Highscore of the player.
+    private int _endOfLevelScore;   // This will be used to store the score that the player will get at the end of the level.
 
     private void Awake()
     {
