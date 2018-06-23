@@ -4,28 +4,41 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour {
 
-    //private variables
-    private List<GameObject> _pool;
-    private List<GameObject> _runningList;
+    // Public variables.
 
-    //serialized so we can add prefabs
+    // Private variables.
+    private GameObject _spawnObject;                 // This stores a reference to the spawn object.
+    private Vector2 _spawnPosition;
+    private Quaternion _spawnRotation;
+    private List<GameObject> _spawnedEnemyList;     // This will hold a reference to any enemys that have been spawned into the level.
+
+    // Serialized so we can add prefabs.
     [SerializeField]
-    private List<GameObject> _spawnList;
+    private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
 
-	void Start () {
-        //new list with good amount of space
-        _pool = new List<GameObject>(20);
-        //set running list to have the same amount just in case
-        _runningList = new List<GameObject>(_pool.Capacity);
-
-        //set up the pool with random prefabs
-        for (int i = 0; i < _pool.Capacity; i++)
-        {
-            _pool.Add(_spawnList[Random.Range(1, _spawnList.Count) - 1]); //array starts at 0, so start at 1, get the count and -1 from the result to adjust back to 0th pos
-        }
+	void Start ()
+    {
+        _spawnPosition = _spawnObject.transform.position;
+        _spawnRotation = _spawnObject.transform.rotation;
 	}
 	
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    private void SpawnAnEnemy()
+    {
+        // Lets spawn an enemy.
+        GameObject Enemy = Instantiate(_enemyPrefabList[Random.Range(0, _enemyPrefabList.Count)],_spawnPosition,_spawnRotation,null);
+
+        // Add anything else that needs to be instantiated here.
+
+        _spawnedEnemyList.Add(Enemy);
+    }
+
+    public void RemoveEnemyFromlist(GameObject _enemy)
+    {
+        _spawnedEnemyList.Remove(_enemy);
+    }
 }
