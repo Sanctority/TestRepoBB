@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallScript : MonoBehaviour {
+public class BallScript : MonoBehaviour
+{
 
     // Public variables.
     public Canvas _uiCanvas;
@@ -27,8 +28,8 @@ public class BallScript : MonoBehaviour {
         {
             _ballRB.AddForce(_ballImpulseUp, ForceMode2D.Impulse);
             Debug.Log("Ball has been kicked");
+            return;
         }
-
         // This is used to get touch input for the left and right side of the device.
         for (int _touchNumber = 0; _touchNumber < Input.touchCount; _touchNumber++)
         {
@@ -50,13 +51,20 @@ public class BallScript : MonoBehaviour {
                 }
             }
         }
-        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         // Footballer enemy collision starts.
-
+        if (collision.gameObject.tag == "Enemy")
+        {
+            //end game
+        }
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("Hit the dirt!");
+            //allow bounce, or set a state, decide later
+        }
         // Footballer enemy collision ends.
     }
 }
