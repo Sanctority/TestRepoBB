@@ -7,7 +7,6 @@ public class SpawnController : MonoBehaviour {
     // Public variables.
 
     // Private variables.
-    private GameObject _spawnObject;                 // This stores a reference to the spawn object.
     private Vector2 _spawnPosition;
     private Quaternion _spawnRotation;
     private List<GameObject> _spawnedEnemyList;     // This will hold a reference to any enemys that have been spawned into the level.
@@ -15,8 +14,10 @@ public class SpawnController : MonoBehaviour {
     // Serialized so we can add prefabs.
     [SerializeField]
     private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
+    [SerializeField]
+    private GameObject _spawnObject;                 // This stores a reference to the spawn object.
 
-	void Start ()
+    void Start ()
     {
         _spawnPosition = _spawnObject.transform.position;
         _spawnRotation = _spawnObject.transform.rotation;
