@@ -38,6 +38,9 @@ public class SpawnController : MonoBehaviour
 
         SpawnHandler();
 
+        /*
+         looking at the code below you should move the move position into a script that is on the sprite. This will save proccessing time.
+         */
         for (int i = 0; i < _spawnedEnemyList.Count; i++)
         {
             _spawnedEnemyList[i].transform.position += (Vector3.left * Time.deltaTime) * _speed;
