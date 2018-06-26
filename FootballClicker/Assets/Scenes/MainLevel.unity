@@ -531,8 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20491493282dbc488771c3e5e3bedcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 0
   _enemyPrefabList: []
-  _spawnObject: {fileID: 2085423497}
 --- !u!4 &1415356466
 Transform:
   m_ObjectHideFlags: 0
@@ -630,11 +630,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be40bbe9c2f303a429208d3e02942cf3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2085423497 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1595275852596586, guid: be40bbe9c2f303a429208d3e02942cf3,
-    type: 2}
-  m_PrefabInternal: {fileID: 2085423496}
 --- !u!1 &2098952436
 GameObject:
   m_ObjectHideFlags: 0
