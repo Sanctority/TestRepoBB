@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-
-    public static SpawnController _instance = null;
-
     // Public variables.
     public float _minSpawnTime;
     public float _maxSpawnTime;
@@ -22,22 +19,6 @@ public class SpawnController : MonoBehaviour
     // Serialized so we can add prefabs.
     [SerializeField]
     private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
-
-    private void Awake()
-    {
-        // Instance of Spawn Controller start.
-        if (_instance == null)
-        {
-            _instance = this;
-        }
-        else if (_instance != this)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
-        // Instance of Spawn Controller end.
-    }
 
     void Start()
     {
