@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class BallScript : MonoBehaviour
 {
@@ -58,13 +60,23 @@ public class BallScript : MonoBehaviour
         // Footballer enemy collision starts.
         if (collision.gameObject.tag == "Enemy")
         {
-            //end game
+            // Footballer enemy collision starts.
+            if (collision.gameObject.tag == "Enemy")
+            {
+                GameOver();
+            }
+            if (collision.gameObject.tag == "Ground")
+            {
+                Debug.Log("Hit the dirt!");
+                //allow bounce, or set a state, decide later
+            }
+            // Footballer enemy collision ends.
         }
-        if (collision.gameObject.tag == "Ground")
-        {
-            Debug.Log("Hit the dirt!");
-            //allow bounce, or set a state, decide later
-        }
-        // Footballer enemy collision ends.
     }
+
+        private void GameOver()
+        {
+            SceneManager.LoadSceneAsync("MainMenu");
+        }
+   
 }
