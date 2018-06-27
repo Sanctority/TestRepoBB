@@ -55,28 +55,19 @@ public class BallScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // Footballer enemy collision starts.
         if (collision.gameObject.tag == "Enemy")
         {
-            // Footballer enemy collision starts.
-            if (collision.gameObject.tag == "Enemy")
-            {
-                GameOver();
-            }
-            if (collision.gameObject.tag == "Ground")
-            {
-                Debug.Log("Hit the dirt!");
-                //allow bounce, or set a state, decide later
-            }
-            // Footballer enemy collision ends.
+            GameOver();
         }
     }
 
-        private void GameOver()
-        {
-            SceneManager.LoadSceneAsync("MainMenu");
-        }
+
+    private void GameOver()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
    
 }
