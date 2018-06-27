@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-
     // Public variables.
+    public float _minSpawnTime;
+    public float _maxSpawnTime;
+    public float _maxEnemies;
 
     // Private variables.
-    [SerializeField]
-    private float _speed;
 
     private GameObject _spawnObject;                 // This stores a reference to the spawn object.
     private Vector2 _spawnPosition;
@@ -28,37 +28,25 @@ public class SpawnController : MonoBehaviour
         _spawnedEnemyList = new List<GameObject>(); // Instantiate empty list
         _spawnRotation = Quaternion.identity;       // Zeroize the rotation - We can change this if there is something specific to one of the enemies
 
-        GameObject ground = GameObject.FindGameObjectWithTag("Ground"); // Find the ground object and get a reference to it - Code readability
-
         _spawnPosition = GameObject.Find("SpawnPos").transform.position;// Find the spawn pos GameObject
+
+        Invoke("SpawnHandler", Random.Range(_minSpawnTime, _maxSpawnTime)); // Start Spawning an enemy after a random time
     }
 
     void Update()
     {
-
-        SpawnHandler();
-
-        /*
-         looking at the code below you should move the move position into a script that is on the sprite. This will save proccessing time.
-         */
-        for (int i = 0; i < _spawnedEnemyList.Count; i++)
-        {
-            _spawnedEnemyList[i].transform.position += (Vector3.left * Time.deltaTime) * _speed;
-            if (!_spawnedEnemyList[i].GetComponent<Renderer>().isVisible && _spawnedEnemyList[i].transform.position.x < Camera.main.transform.position.x)
-            {
-                RemoveEnemyFromlist(_spawnedEnemyList[i]);
-                Debug.Log("Removed");
-            }
-        }
+ 
     }
 
     private void SpawnHandler()
     {
-        if (_spawnedEnemyList.Count < 1)
+        if (_spawnedEnemyList.Count < _maxEnemies)                          // Keep a maximum amount just in case - Might be pointless but hey
         {
-            SpawnAnEnemy();
+            SpawnAnEnemy();                                                 
         }
-    }
+
+        Invoke("SpawnHandler", Random.Range(_minSpawnTime, _maxSpawnTime)); // Pretty sure this isnt recursion... will use a coroutine if it turns out to be a massive drain
+    }                                                                       // Calls the SpawnHandler function after a random amount of time
 
     private void SpawnAnEnemy()
     {
