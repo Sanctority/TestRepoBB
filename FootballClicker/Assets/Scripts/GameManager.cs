@@ -50,4 +50,9 @@ public class GameManager : MonoBehaviour {
     {
         return _highscore;
     }
+
+    public void RunAudio()
+    {
+       
+    }
 }
