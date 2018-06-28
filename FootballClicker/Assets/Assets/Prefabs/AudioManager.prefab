@@ -128,3 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenuMusic: {fileID: 8300000, guid: 3eb9d03bdf16cec4ab43669a2a132109, type: 3}
   _gameMusic: {fileID: 8300000, guid: 0918c84b40179a0418cf82f6f5b3aa29, type: 3}
+  _shopMusic: {fileID: 8300000, guid: a246e8408d65e95418315204b18a8ebb, type: 3}

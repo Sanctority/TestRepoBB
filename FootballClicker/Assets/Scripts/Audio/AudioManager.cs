@@ -8,9 +8,10 @@ public class AudioManager : MonoBehaviour
     // Public variables
     public AudioClip _mainMenuMusic;                // Main menu audio clip
     public AudioClip _gameMusic;                    // Main game audio clip
+    public AudioClip _shopMusic;                    // Main shop audio clip
 
     // Private variables
-    private AudioSource _audioSource;               
+    private AudioSource _audioSource;
 
     private void Start()
     {
@@ -30,11 +31,18 @@ public class AudioManager : MonoBehaviour
             _audioSource.clip = _mainMenuMusic; // Change the clip
             _audioSource.Play();
         }
-        else 
+        else
         if (next.buildIndex == 1)               // Check if scene is Main game
         {
             _audioSource.Stop();
             _audioSource.clip = _gameMusic;     // Change the clip
+            _audioSource.Play();
+        }
+        else
+        if (next.buildIndex == 2)               // Check if scene is Shop
+        {
+            _audioSource.Stop();
+            _audioSource.clip = _shopMusic;     // Change the clip
             _audioSource.Play();
         }
     }
