@@ -6,12 +6,29 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     // Public variables
+    public static AudioManager _instance;
     public AudioClip _mainMenuMusic;                // Main menu audio clip
     public AudioClip _gameMusic;                    // Main game audio clip
     public AudioClip _shopMusic;                    // Main shop audio clip
 
     // Private variables
     private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        // Instance of game manager start.
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+        // Instance of game manager end.
+    }
 
     private void Start()
     {

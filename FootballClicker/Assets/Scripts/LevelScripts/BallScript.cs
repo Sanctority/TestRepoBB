@@ -82,10 +82,9 @@ public class BallScript : MonoBehaviour
         }
     }
 
-
     private void GameOver()
     {
+        _uiCanvas.gameObject.GetComponent<MainLevel.UiScript>().GameOver();
         SceneManager.LoadSceneAsync("MainMenu");
     }
-   
 }

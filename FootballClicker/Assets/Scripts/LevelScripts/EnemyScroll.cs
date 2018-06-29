@@ -11,13 +11,14 @@ public class EnemyScroll : MonoBehaviour
 
     [SerializeField]
     private float _speed;           // Basic movement speed
+    private bool _canJump;
 
     private Rigidbody2D _enemyRB;
 
     void Start()
     {
+        _canJump = Random.Range(0, 2) == 0;                                 //50 50 chance to jump
         _enemyRB = GetComponent<Rigidbody2D>();
-        Invoke("Jump", Random.Range(_minJumpTime, _maxJumpTime));           //Start the enemy jump function with a delay of random time
     }
 
     void FixedUpdate()
@@ -25,9 +26,12 @@ public class EnemyScroll : MonoBehaviour
         transform.position += (Vector3.left * Time.deltaTime) * _speed;     //Basic movement that should be consistant
     }
 
-    private void Jump()
+    public void Jump()
     {
-        _enemyRB.AddForce(_enemyImpulseUp, ForceMode2D.Impulse);            
-        Invoke("Jump", Random.Range(_minJumpTime, _maxJumpTime));           // Pretty sure this isnt recursion... will use a coroutine if it turns out to be a massive drain
+        if (_canJump)
+        {
+            _enemyRB.AddForce(_enemyImpulseUp, ForceMode2D.Impulse);
+            _canJump = false;
+        }
     }                                                                       // Invokes the Jump function after it has finished jumping to execute with a delay of random time
 }
