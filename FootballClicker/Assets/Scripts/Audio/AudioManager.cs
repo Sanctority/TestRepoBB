@@ -27,26 +27,27 @@ public class AudioManager : MonoBehaviour
 
     private void SceneChanged(Scene current, Scene next)
     {
-        if (next.buildIndex == 0)               // Check if next scene is Main menu
+        _audioSource.Stop();
+        switch (next.buildIndex)
         {
-            _audioSource.Stop();
-            _audioSource.clip = _mainMenuMusic; // Change the clip
-            _audioSource.Play();
+            default:
+            case 0:
+                {
+                    _audioSource.clip = _mainMenuMusic; // Change the clip
+                }
+                break;
+            case 1:
+                {
+                    _audioSource.clip = _gameMusic;     // Change the clip
+                }
+                break;
+            case 2:
+                {
+                    _audioSource.clip = _shopMusic;     // Change the clip
+                }
+                break;
         }
-        else
-        if (next.buildIndex == 1)               // Check if scene is Main game
-        {
-            _audioSource.Stop();
-            _audioSource.clip = _gameMusic;     // Change the clip
-            _audioSource.Play();
-        }
-        else
-        if (next.buildIndex == 2)               // Check if scene is Shop
-        {
-            _audioSource.Stop();
-            _audioSource.clip = _shopMusic;     // Change the clip
-            _audioSource.Play();
-        }
+        _audioSource.Play();
     }
 
     public void ChangeVolume(float _vol)
