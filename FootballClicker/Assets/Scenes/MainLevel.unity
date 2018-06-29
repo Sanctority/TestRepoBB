@@ -729,6 +729,41 @@ Prefab:
       propertyPath: m_Mass
       value: 2.6
       objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _bounceLimit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _uiScript
+      value: 
+      objectReference: {fileID: 1206513861}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _uiScriptObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _ballImpulseUp.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _ballImpulseDown.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _physicsNoBounce
+      value: 
+      objectReference: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _physicsHasBounce
+      value: 
+      objectReference: {fileID: 6200000, guid: 968019c73112b4a42b5f4fc25375d719, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
   m_IsPrefabParent: 0
@@ -821,7 +856,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3

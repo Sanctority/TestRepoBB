@@ -28,7 +28,7 @@ namespace MainLevel
 
         public void GameOver()
         {
-
+            GameManager._instance.SaveHighScore((int)_scoreFloat);
         }
     }
 }
