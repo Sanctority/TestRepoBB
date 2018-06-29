@@ -20,6 +20,6 @@ public class MainMenuManager : MonoBehaviour {
     // This funciton is used to refresh the highscore text.
     private void UpdateHighscoreText()
     {
-        _highscoreDisplayText.text = "Highscore: " + _GM.ReturnHighScore().ToString();
+        _highscoreDisplayText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString(); ;
     }
 }
