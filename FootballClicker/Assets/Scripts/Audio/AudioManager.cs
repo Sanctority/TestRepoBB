@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         SceneManager.activeSceneChanged += SceneChanged;    // Subscribe to the activeSceneChanged event
 
-        _audioSource.volume = 0.12f;                        // Set audio to a low amount, its still loud, might want to clamp it
+        _audioSource.volume = 1f;                        // Set audio to a low amount, its still loud, might want to clamp it
         _audioSource.loop = true;                           // Set audio to loop
         _audioSource.clip = _mainMenuMusic;                 // Audio Source will load on main menu when game loads, which does not call the activeSceneChanged event, so assign it here
         _audioSource.Play();                                // Play the menu music
