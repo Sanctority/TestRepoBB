@@ -33,6 +33,18 @@ public class GameManager : MonoBehaviour {
 
     private void Start()
     {
+        //PlayerPrefs.SetInt("FirstTimeLoad", 0);
+
+        if (PlayerPrefs.GetInt("FirstTimeLoad") != 1)
+        {
+            PlayerPrefs.SetInt("0", 1);
+            PlayerPrefs.SetInt("Equipped", 0);
+            PlayerPrefs.SetInt("Coins", 1000);
+
+            PlayerPrefs.SetInt("FirstTimeLoad", 1);
+        }
+        
+
         _highscore = PlayerPrefs.GetInt("Highscore");       // Gets the current saved highscore and stores it in the variable.
         _coins = PlayerPrefs.GetInt("Coins");
     }

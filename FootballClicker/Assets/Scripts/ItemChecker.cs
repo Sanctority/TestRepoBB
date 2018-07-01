@@ -24,7 +24,16 @@ public class ItemChecker : MonoBehaviour {
 
         if (PlayerPrefs.GetInt(_itemID.ToString()) == 1)
         {
-            _txtBuyItem.text = "Bought";
+
+            if(PlayerPrefs.GetInt("Equipped") == _itemID)
+            {
+                _txtBuyItem.text = "Equipped";
+            }
+            else
+            {
+                _txtBuyItem.text = "Equip";
+            }
+            
         }
         else
         {
