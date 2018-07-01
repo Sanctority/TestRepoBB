@@ -243,6 +243,16 @@ Prefab:
       propertyPath: m_TagString
       value: ShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
   m_IsPrefabParent: 0
@@ -376,6 +386,16 @@ Prefab:
       propertyPath: m_TagString
       value: ShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
   m_IsPrefabParent: 0
@@ -417,8 +437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -76.524994}
-  m_SizeDelta: {x: 0, y: -153.05}
+  m_AnchoredPosition: {x: 0.024925, y: -76.493}
+  m_SizeDelta: {x: 0.050049, y: -153.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329661803
 MonoBehaviour:
@@ -455,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.603, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -605,6 +625,16 @@ Prefab:
     - target: {fileID: 1434415109808496, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
       propertyPath: m_TagString
       value: ShopItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
@@ -1095,6 +1125,16 @@ Prefab:
       propertyPath: m_TagString
       value: ShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
   m_IsPrefabParent: 0
@@ -1239,7 +1279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -819, y: 468}
+  m_AnchoredPosition: {x: -853, y: 435.16}
   m_SizeDelta: {x: 197.8, y: 76.904}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1435253242
@@ -1313,8 +1353,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 016de4be5f9d5e546859f392a7d4f961, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1607,6 +1647,16 @@ Prefab:
       propertyPath: m_TagString
       value: ShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114030737832839232, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
   m_IsPrefabParent: 0
@@ -1642,8 +1692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0044994, y: -0.011784}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 15.9, y: -2.1}
+  m_SizeDelta: {x: 2066.5, y: 1075.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649225998
 MonoBehaviour:
@@ -1711,8 +1761,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000051259995, y: 465.8}
-  m_SizeDelta: {x: 1920, y: 157.7}
+  m_AnchoredPosition: {x: 0.00005722, y: 440.39}
+  m_SizeDelta: {x: 2005.8, y: 153.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2004412474
 MonoBehaviour:
@@ -1726,7 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 0.378}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
