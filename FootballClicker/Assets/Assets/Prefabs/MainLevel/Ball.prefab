@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917092816229494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.28, y: 3.15, z: 0}
+  m_LocalPosition: {x: -4.62, y: 3.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +94,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 2.6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiCanvas: {fileID: 0}
   _ballImpulseUp: {x: 0, y: 10}
-  _ballImpulseDown: {x: 0, y: -10}
+  _ballImpulseDown: {x: 0, y: -15}
   _physicsHasBounce: {fileID: 6200000, guid: 968019c73112b4a42b5f4fc25375d719, type: 2}
   _physicsNoBounce: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
+  _bounceLimitUp: 1
+  _bounceLimitDown: 1
