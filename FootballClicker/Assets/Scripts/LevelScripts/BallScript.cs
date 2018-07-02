@@ -21,16 +21,12 @@ public class BallScript : MonoBehaviour
     private int _numOfBouncesUp;
     private int _numOfBouncesDown;
 
-    
-
     private void Start()
     {
         // Instantiate all the needed variable, materials ect... for the ball.
         _ballRB = GetComponent<Rigidbody2D>();
         _ballRB.sharedMaterial = _physicsHasBounce;
         _numOfBouncesUp = 0;
-
-        
     }
 
     private void Update()
