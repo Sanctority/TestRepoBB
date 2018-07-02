@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.6
+  m_Mass: 1.4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minJumpTime: 0.5
   _maxJumpTime: 2.5
-  _enemyImpulseUp: {x: 0, y: 14}
+  _enemyImpulseUp: {x: 0, y: 15}
   _speed: 5
 --- !u!212 &212753808895459984
 SpriteRenderer:
