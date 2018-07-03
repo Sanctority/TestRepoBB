@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour {
 
     public void SaveHighScore(int num)
     {
+        PlayerPrefs.SetInt("PreviousScore", num);
+
         if(PlayerPrefs.GetInt("Highscore") < num)
         {
             PlayerPrefs.SetInt("Highscore", num);

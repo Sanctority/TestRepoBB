@@ -29,6 +29,7 @@ namespace MainLevel
         public void GameOver()
         {
             GameManager._instance.SaveHighScore((int)_scoreFloat);
+            GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
         }
     }
 }
