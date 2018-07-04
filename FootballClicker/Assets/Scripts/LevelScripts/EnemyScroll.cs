@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnemyScroll : MonoBehaviour
 {
-
-    public float _minJumpTime;      // Minimum time before an enemy can jump
-    public float _maxJumpTime;      // Maximum time for an enemy to jump
     public Vector2 _enemyImpulseUp; // Force applied to the jumping enemy
 
     [SerializeField]
@@ -33,5 +30,5 @@ public class EnemyScroll : MonoBehaviour
             _enemyRB.AddForce(_enemyImpulseUp, ForceMode2D.Impulse);
             _canJump = false;
         }
-    }                                                                       // Invokes the Jump function after it has finished jumping to execute with a delay of random time
+    }                                                                       
 }
