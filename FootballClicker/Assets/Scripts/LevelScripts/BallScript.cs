@@ -20,7 +20,6 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D _ballRB;
     private int _numOfBouncesUp;
     private int _numOfBouncesDown;
-    private int _kicks;
 
     
 
@@ -57,7 +56,7 @@ public class BallScript : MonoBehaviour
                 {
                     if(_numOfBouncesUp < _bounceLimitUp)
                     {
-                        _kicks++;
+                        AchievementIncrementKicker();
 
                         _ballRB.sharedMaterial = _physicsHasBounce;
                         _ballRB.AddForce(_ballImpulseUp, ForceMode2D.Impulse);
@@ -71,7 +70,7 @@ public class BallScript : MonoBehaviour
                 {
                     if(_numOfBouncesDown < _bounceLimitDown)
                     {
-                        _kicks++;
+                        AchievementIncrementKicker();
 
                         _ballRB.sharedMaterial = _physicsNoBounce;
                         _ballRB.AddForce(_ballImpulseDown, ForceMode2D.Impulse);
@@ -102,14 +101,13 @@ public class BallScript : MonoBehaviour
     private void GameOver()
     {
         _uiCanvas.gameObject.GetComponent<MainLevel.UiScript>().GameOver();
-        AchievementIncrementKicker();
         SceneManager.LoadSceneAsync("GameOver");
     }
 
     // This will be used to handle the achievments for kicking the ball
     private void AchievementIncrementKicker()
     {
-        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, _kicks);
-        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, _kicks);
+        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, 1);
+        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, 1);
     }
 }
