@@ -32,6 +32,9 @@ UnityConnectSettings:
     m_Enabled: 1
     m_InitializeOnStartup: 1
     m_TestMode: 1
+<<<<<<< HEAD
+>>>>>>> parent of a669b23... ignore
+=======
 >>>>>>> parent of a669b23... ignore
     m_IosGameId: 
     m_AndroidGameId: 
