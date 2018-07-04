@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour {
 
     private GameManager _gm;
     private int _coins;
+    private int _gems;
     private GameObject[] _shopItems;
 
     [SerializeField]
@@ -15,6 +16,9 @@ public class ShopManager : MonoBehaviour {
 
     [SerializeField]
     private TextMeshProUGUI _txtCoins;
+
+    [SerializeField]
+    private TextMeshProUGUI _txtGems;
 
 
     private void Start()
@@ -24,6 +28,7 @@ public class ShopManager : MonoBehaviour {
         _shopItems = GameObject.FindGameObjectsWithTag("ShopItem");
 
         UpdateCoins();
+        UpdateGems();
     }
 
     public void BuyItem(int ItemID)
@@ -44,25 +49,47 @@ public class ShopManager : MonoBehaviour {
         
     }
 
-    private void UnlockItem(int num)        // this function will be used to unlock the hat if the player has the right amount of coins
+    private void UnlockItem(int num)        // this function will be used to unlock the ball if the player has the right amount of coins or gems
     {
         int _holder = num;
         
-                if(PlayerPrefs.GetInt(_holder.ToString()) == 0)
+        if(_currentSelectedObject.GetComponent<ItemChecker>().ReturnIfBoughtWithCoins() == true)
+        {
+            if (PlayerPrefs.GetInt(_holder.ToString()) == 0)
+            {
+                if (_gm.BuyItemCoins(_currentSelectedObject.GetComponent<ItemChecker>()._coinsCost) == true)
                 {
-                    if (_gm.BuyItem(_currentSelectedObject.GetComponent<ItemChecker>()._coinsCost) == true)
-                    {
-                        PlayerPrefs.SetInt(_holder.ToString(), 1);
-                        _currentSelectedObject.GetComponent<ItemChecker>().UpdateText();
-                        UpdateCoins();
-                    }
-                } 
+                    PlayerPrefs.SetInt(_holder.ToString(), 1);
+                    _currentSelectedObject.GetComponent<ItemChecker>().UpdateText();
+                    UpdateCoins();
+                }
+            }
+        }
+        else if(_currentSelectedObject.GetComponent<ItemChecker>().ReturnIfBoughtWithCoins() == false)
+        {
+            if (PlayerPrefs.GetInt(_holder.ToString()) == 0)
+            {
+                if (_gm.BuyItemGems(_currentSelectedObject.GetComponent<ItemChecker>()._gemsCost) == true)
+                {
+                    PlayerPrefs.SetInt(_holder.ToString(), 1);
+                    _currentSelectedObject.GetComponent<ItemChecker>().UpdateText();
+                    UpdateGems();
+                }
+            }
+        }
+                
     }
 
     private void UpdateCoins()
     {
         _coins = _gm.ReturnCoins();
         _txtCoins.text = "Coins: " + _coins.ToString();
+    }
+
+    private void UpdateGems()
+    {
+        _gems = _gm.ReturnGems();
+        _txtGems.text = "Gems: " + _gems.ToString();
     }
 
     private void UpdateAllShopItemText()

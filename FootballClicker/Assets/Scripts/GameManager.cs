@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     private int _highscore;      // This will be used to store the current Highscore of the player.
     private int _endOfLevelScore;   // This will be used to store the score that the player will get at the end of the level.
     private int _coins;
+    private int _gems;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetInt("0", 1);
             PlayerPrefs.SetInt("Equipped", 0);
             PlayerPrefs.SetInt("Coins", 1000);
+            PlayerPrefs.SetInt("Gems", 100);
 
             PlayerPrefs.SetInt("FirstTimeLoad", 1);
         }
@@ -47,7 +49,10 @@ public class GameManager : MonoBehaviour {
 
         _highscore = PlayerPrefs.GetInt("Highscore");       // Gets the current saved highscore and stores it in the variable.
         _coins = PlayerPrefs.GetInt("Coins");
+        _gems = PlayerPrefs.GetInt("Gems");
     }
+
+    #region Get and set functions
 
     public void SaveHighScore(int num)
     {
@@ -83,7 +88,18 @@ public class GameManager : MonoBehaviour {
         _coins = PlayerPrefs.GetInt("Coins");
     }
 
-    public bool BuyItem(int num)
+    public int ReturnGems()
+    {
+        return _gems;
+    }
+
+    public void UpdateGems(int num)
+    {
+        PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + num);
+        _gems = PlayerPrefs.GetInt("Gems");
+    }
+
+    public bool BuyItemCoins(int num)
     {
         if((PlayerPrefs.GetInt("Coins") - num) < 0)
         {
@@ -95,4 +111,20 @@ public class GameManager : MonoBehaviour {
             return true;
         }
     }
+
+    public bool BuyItemGems(int num)
+    {
+        if ((PlayerPrefs.GetInt("Gems") - num) < 0)
+        {
+            return false;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + num);
+            return true;
+        }
+    }
+
+
+    #endregion get and set functions end
 }

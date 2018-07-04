@@ -7,6 +7,10 @@ using TMPro;
 public class ItemChecker : MonoBehaviour {
 
     public int _coinsCost;
+    public int _gemsCost;
+
+    [SerializeField]
+    private bool _costsCoinsToBuyItem;
 
     [SerializeField]
     private int _itemID;
@@ -37,7 +41,20 @@ public class ItemChecker : MonoBehaviour {
         }
         else
         {
-            _txtBuyItem.text = "Coins: " + _coinsCost.ToString();
+            if(_costsCoinsToBuyItem == true)
+            {
+                _txtBuyItem.text = "Coins: " + _coinsCost.ToString();
+            }
+            else if(_costsCoinsToBuyItem == false)
+            {
+                _txtBuyItem.text = "Gems: " + _gemsCost.ToString();
+            }
+            
         }
+    }
+
+    public bool ReturnIfBoughtWithCoins()
+    {
+        return _costsCoinsToBuyItem;
     }
 }
