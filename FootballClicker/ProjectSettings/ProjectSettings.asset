@@ -589,12 +589,16 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   cloudServicesEnabled:
     Build: 0
     Collab: 0
     ErrorHub: 0
     Hub: 0
     UNet: 0
+=======
+  cloudServicesEnabled: {}
+>>>>>>> parent of 1f7a248... Ads package added
 =======
   cloudServicesEnabled: {}
 >>>>>>> parent of 1f7a248... Ads package added
