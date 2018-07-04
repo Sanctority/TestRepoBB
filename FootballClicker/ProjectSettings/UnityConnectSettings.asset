@@ -24,6 +24,7 @@ UnityConnectSettings:
     m_TestConfigUrl: 
   UnityAdsSettings:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Enabled: 0
     m_InitializeOnStartup: 0
     m_TestMode: 0
@@ -39,6 +40,11 @@ UnityConnectSettings:
 >>>>>>> parent of a669b23... ignore
 =======
 >>>>>>> parent of a669b23... ignore
+=======
+    m_Enabled: 0
+    m_InitializeOnStartup: 1
+    m_TestMode: 0
+>>>>>>> parent of 1f7a248... Ads package added
     m_IosGameId: 
     m_AndroidGameId: 
     m_GameIds:
