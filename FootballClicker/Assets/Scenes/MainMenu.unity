@@ -524,7 +524,7 @@ Prefab:
         type: 2}
       propertyPath: _gameMusic
       value: 
-      objectReference: {fileID: 8300000, guid: ff3cd99f712f0174fa82b7c019af9428, type: 3}
+      objectReference: {fileID: 8300000, guid: 7953ddb3216f48c468e0d29ba3b1822c, type: 3}
     - target: {fileID: 114180664156951348, guid: eee20bff35b2df449993c96e47c6d436,
         type: 2}
       propertyPath: _shopMusic

@@ -126,6 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192ab80fb54b2354699f3fcf1e1f5219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainMenuMusic: {fileID: 8300000, guid: 3eb9d03bdf16cec4ab43669a2a132109, type: 3}
-  _gameMusic: {fileID: 8300000, guid: 0918c84b40179a0418cf82f6f5b3aa29, type: 3}
-  _shopMusic: {fileID: 8300000, guid: a246e8408d65e95418315204b18a8ebb, type: 3}
+  _mainMenuMusic: {fileID: 8300000, guid: 4603f8078668e104dafb0d3e50ded787, type: 3}
+  _gameMusic: {fileID: 8300000, guid: 7953ddb3216f48c468e0d29ba3b1822c, type: 3}
+  _shopMusic: {fileID: 8300000, guid: 75ef0bd44a1f7264382b66bd284b48d5, type: 3}

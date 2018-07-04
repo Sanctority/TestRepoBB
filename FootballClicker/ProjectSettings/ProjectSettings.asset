@@ -4,13 +4,13 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  productGUID: 9291029685c55004d9c344bc879fb080
+  productGUID: af511592f5ec2c74f936ee56ac2d7c5c
   AndroidProfiler: 0
   defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: com.GEMSTUDIOS.FOOTBALLCLICKER
+  companyName: DefaultCompany
   productName: FootballClicker
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -52,7 +52,7 @@ PlayerSettings:
   m_MobileMTRendering: 0
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
-  androidShowActivityIndicatorOnLoading: 0
+  androidShowActivityIndicatorOnLoading: -1
   tizenShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
   displayResolutionDialog: 1
@@ -136,7 +136,7 @@ PlayerSettings:
       useSustainedPerformanceMode: 0
     hololens:
       depthFormat: 1
-  protectGraphicsMemory: 0
+  protectGraphicsMemory: 1
   useHDRDisplay: 0
   targetPixelDensity: 570
   resolutionScalingMode: 1
@@ -588,20 +588,7 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  cloudServicesEnabled:
-    Build: 0
-    Collab: 0
-    ErrorHub: 0
-    Hub: 0
-    UNet: 0
-=======
   cloudServicesEnabled: {}
->>>>>>> parent of 1f7a248... Ads package added
-=======
-  cloudServicesEnabled: {}
->>>>>>> parent of 1f7a248... Ads package added
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 
