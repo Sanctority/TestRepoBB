@@ -14,6 +14,12 @@ namespace MainLevel
         // Private variables.
         public float _scoreFloat;
 
+        [SerializeField]
+        private float _coinMultiplier;
+
+        [SerializeField]
+        private float _eventMultiplier;
+
         private void Start()
         {
             _scoreFloat = 0;
@@ -29,6 +35,9 @@ namespace MainLevel
         public void GameOver()
         {
             GameManager._instance.SaveHighScore((int)_scoreFloat);
+
+            GameManager._instance.UpdateCoins((int)(_scoreFloat *(_coinMultiplier * _eventMultiplier)));
+
             GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
         }
     }

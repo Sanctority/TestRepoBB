@@ -740,6 +740,8 @@ MonoBehaviour:
   _scoreText: {fileID: 2098952438}
   _textBeforeScore: 'Score: '
   _scoreFloat: 0
+  _coinMultiplier: 0.5
+  _eventMultiplier: 1
 --- !u!1001 &1351928973
 Prefab:
   m_ObjectHideFlags: 0
