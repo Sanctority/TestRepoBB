@@ -45,7 +45,6 @@ public class FacebookScript : MonoBehaviour {
             FB.ActivateApp();
         }
 
-        _facebookLoginButton.SetActive(false);
     }
 
     private void Start()
@@ -132,6 +131,10 @@ public class FacebookScript : MonoBehaviour {
         if (_loggedIn == true)
         {
             _facebookLoginButton.SetActive(false);
+        }
+        else if(_loggedIn == false)
+        {
+            _facebookLoginButton.SetActive(true);
         }
         
     }
