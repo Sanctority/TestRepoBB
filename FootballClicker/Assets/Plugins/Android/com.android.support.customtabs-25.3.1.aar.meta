@@ -2,13 +2,6 @@ fileFormatVersion: 2
 guid: 5e659d9ea0daee148af79c8be86a386c
 labels:
 - gpsr
-<<<<<<< HEAD:FootballClicker/Assets/Plugins/Android/com.android.support.customtabs-25.3.1.aar.meta
-timeCreated: 1530885019
-=======
-folderAsset: yes
-timeCreated: 1530885910
->>>>>>> b6af2eb7ef292cb86c372eea0278262bf0908358:FootballClicker/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-license-11.6.2.meta
-licenseType: Free
 PluginImporter:
   serializedVersion: 2
   iconMap: {}
