@@ -81,14 +81,14 @@ public class FacebookScript : MonoBehaviour {
 
          FB.LogInWithReadPermissions(permissions); // add callbacks
 
-        bool _loggedIn = FB.IsLoggedIn;
 
-        if(_loggedIn == true)
+
+        if(FB.IsLoggedIn)
         {
             GetFriendsPlayingThisGame();
             CheckIfLoggedIntoFacebook();
         }
-        else if(_loggedIn == false)
+        else
         {
             CheckIfLoggedIntoFacebook();
         }
@@ -128,6 +128,8 @@ public class FacebookScript : MonoBehaviour {
 
     public void GetFriendsPlayingThisGame()
     {
+        Debug.Log("Filling friends list");
+
         string query = "/me/friends";
 
         FB.API(query, HttpMethod.GET, result =>
@@ -143,17 +145,20 @@ public class FacebookScript : MonoBehaviour {
                 _friendsText.text += ((Dictionary<string,object>)_diction)["name"];
             }
         });
+
+        Debug.Log("Friends list populated");
     }
 
     public void CheckIfLoggedIntoFacebook()
     {
-        bool _loggedIn = FB.IsLoggedIn;
+        Debug.Log(FB.IsLoggedIn);
 
-        if (_loggedIn == true)
+
+        if (FB.IsLoggedIn)
         {
             _facebookLoginButton.SetActive(false);
         }
-        else if(_loggedIn == false)
+        else 
         {
             _facebookLoginButton.SetActive(true);
         }
