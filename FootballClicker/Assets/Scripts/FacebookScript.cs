@@ -58,6 +58,7 @@ public class FacebookScript : MonoBehaviour {
         if(_refreshTime >= 30)
         {
             Refresh();
+            _refreshTime = 0;
         }
     }
 
