@@ -12,6 +12,8 @@ public class FacebookScript : MonoBehaviour {
     [SerializeField]
     private GameObject _facebookLoginButton;
 
+    private float _refreshTime;
+
     private void Awake()
     {
         if (!FB.IsInitialized)
@@ -45,6 +47,24 @@ public class FacebookScript : MonoBehaviour {
             FB.ActivateApp();
         }
 
+        _refreshTime = 0;
+
+    }
+
+    private void Update()
+    {
+        _refreshTime += Time.deltaTime;
+
+        if(_refreshTime >= 30)
+        {
+            Refresh();
+        }
+    }
+
+    private void Refresh()
+    {
+        CheckIfLoggedIntoFacebook();
+        GetFriendsPlayingThisGame();
     }
 
     private void Start()
