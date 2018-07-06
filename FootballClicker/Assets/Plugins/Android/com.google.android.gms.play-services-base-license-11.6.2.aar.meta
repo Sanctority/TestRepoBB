@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:FootballClicker/Assets/Plugins/Android/com.google.android.gms.play-services-base-license-11.6.2.aar.meta
 guid: 107fdd7e676d7f94f979755eca951709
 labels:
 - gpsr
 timeCreated: 1530897894
+=======
+guid: d6be92b5198a904449f5a567c1e67038
+labels:
+- gpsr
+timeCreated: 1530890797
+>>>>>>> b69dd97847acf754679deb91f5887a7aeaef28cd:FootballClicker/Assets/Plugins/Android/com.google.android.gms.play-services-base-license-11.6.2.aar.meta
 licenseType: Free
 PluginImporter:
   serializedVersion: 2
