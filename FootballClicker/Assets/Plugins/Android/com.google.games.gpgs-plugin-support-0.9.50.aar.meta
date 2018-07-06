@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 5c3d800298fa0f14dbf5444fc8f1fb74
 labels:
 - gpsr
-timeCreated: 1530897894
-=======
-guid: cfcbf1f65675c714a896366601b5fe01
-labels:
-- gpsr
-timeCreated: 1530890797
->>>>>>> b69dd97847acf754679deb91f5887a7aeaef28cd
+timeCreated: 1530899088
 licenseType: Free
 PluginImporter:
   serializedVersion: 2
