@@ -1027,6 +1027,11 @@ Prefab:
       propertyPath: _txtCoins
       value: 
       objectReference: {fileID: 1436011160}
+    - target: {fileID: 114853151730231512, guid: 22ca4010e36d9ff42b0d67e727d8c968,
+        type: 2}
+      propertyPath: _txtGems
+      value: 
+      objectReference: {fileID: 368194331}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ca4010e36d9ff42b0d67e727d8c968, type: 2}
   m_IsPrefabParent: 0
@@ -1299,6 +1304,16 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114995962262219772, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: _itemID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229976819210668, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
