@@ -646,17 +646,17 @@ Prefab:
         type: 2}
       propertyPath: _gameMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 7953ddb3216f48c468e0d29ba3b1822c, type: 3}
+      objectReference: {fileID: 8300000, guid: ec78ff017993fd64b8efb1e22ece30c4, type: 3}
     - target: {fileID: 114180664156951348, guid: eee20bff35b2df449993c96e47c6d436,
         type: 2}
       propertyPath: _shopMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 75ef0bd44a1f7264382b66bd284b48d5, type: 3}
+      objectReference: {fileID: 8300000, guid: 73e8cc5c0684db642ab7e6098ff35948, type: 3}
     - target: {fileID: 114180664156951348, guid: eee20bff35b2df449993c96e47c6d436,
         type: 2}
       propertyPath: _mainMenuMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 4603f8078668e104dafb0d3e50ded787, type: 3}
+      objectReference: {fileID: 8300000, guid: b44d02480c0b5ee42928a47c9f070d2c, type: 3}
     - target: {fileID: 82145405485378536, guid: eee20bff35b2df449993c96e47c6d436,
         type: 2}
       propertyPath: m_Volume
