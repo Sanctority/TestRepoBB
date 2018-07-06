@@ -1,3 +1,0 @@
-- Create the enemies
-- Add a gameover screen
-- Add a currency system
