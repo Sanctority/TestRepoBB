@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 2089722565}
   - component: {fileID: 2089722564}
   m_Layer: 5
-  m_Name: BtnShop
+  m_Name: BtnMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
