@@ -423,7 +423,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &286409823
 Transform:
@@ -1239,22 +1239,22 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -1264,7 +1264,7 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -1274,7 +1274,7 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -1315,6 +1315,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114578566632597124, guid: 48425cc1a33c1f0439aaf3cf668d9009,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5a24df55f37483d44988eb32e1e17fd2,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
   m_IsPrefabParent: 0
@@ -2452,22 +2458,22 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 470
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -2477,7 +2483,7 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -2487,7 +2493,7 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}

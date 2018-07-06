@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114431764076794588}
   - component: {fileID: 58251410852987886}
   - component: {fileID: 50619847145411776}
-  - component: {fileID: 212522568107538490}
+  - component: {fileID: 212122765825185010}
   m_Layer: 0
   m_Name: EyeBall
   m_TagString: Untagged
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1236581521408254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0}
+  m_LocalPosition: {x: -0.08, y: -0.61, z: -0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,9 +94,9 @@ MonoBehaviour:
   _ballImpulseDown: {x: 0, y: -15}
   _physicsHasBounce: {fileID: 6200000, guid: 968019c73112b4a42b5f4fc25375d719, type: 2}
   _physicsNoBounce: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
-  _bounceLimitUp: 1
+  _bounceLimitUp: 3
   _bounceLimitDown: 1
---- !u!212 &212522568107538490
+--- !u!212 &212122765825185010
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

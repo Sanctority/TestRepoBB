@@ -217,7 +217,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/jonathan/Desktop/FootballClickerKeystore.keystore
+  AndroidKeystoreName: E:/FootballClickerKeystore.keystore
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
