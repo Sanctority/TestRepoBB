@@ -12,9 +12,6 @@ public class FacebookScript : MonoBehaviour {
     [SerializeField]
     private GameObject _facebookLoginButton;
 
-    [SerializeField]
-    private GameObject _facebookLogoutButton;
-
     private void Awake()
     {
         if (!FB.IsInitialized)
@@ -49,7 +46,6 @@ public class FacebookScript : MonoBehaviour {
         }
 
         _facebookLoginButton.SetActive(false);
-        _facebookLogoutButton.SetActive(false);
     }
 
     private void Start()
@@ -136,12 +132,7 @@ public class FacebookScript : MonoBehaviour {
         if (_loggedIn == true)
         {
             _facebookLoginButton.SetActive(false);
-            _facebookLogoutButton.SetActive(true);
         }
-        else if (_loggedIn == false)
-        {
-            _facebookLoginButton.SetActive(true);
-            _facebookLogoutButton.SetActive(false);
-        }
+        
     }
 }
