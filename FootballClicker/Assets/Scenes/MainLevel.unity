@@ -405,7 +405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976841322}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.004, y: -0.018, z: 6.74}
+  m_LocalPosition: {x: 0.02, y: 0, z: 6.74}
   m_LocalScale: {x: 17.762335, y: 10.0432415, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -571,11 +571,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4724528783198230, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4724528783198230, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4724528783198230, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
       propertyPath: m_LocalPosition.z
@@ -606,6 +606,16 @@ Prefab:
       propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 1206513863}
+    - target: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
+      propertyPath: m_Name
+      value: Football
+      objectReference: {fileID: 0}
+    - target: {fileID: 212951564957506082, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 388da1189983cfa4fa9668d3b751adf3,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
   m_IsPrefabParent: 0
@@ -761,6 +771,10 @@ Prefab:
     - target: {fileID: 4323053332519058, guid: 7c3fde2b6a67a97498fa6e81ef61bb10, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612065046672902, guid: 7c3fde2b6a67a97498fa6e81ef61bb10, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3fde2b6a67a97498fa6e81ef61bb10, type: 2}
@@ -1054,19 +1068,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4994589718579102, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.00000009415696
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4994589718579102, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4994589718579102, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.7071067
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4994589718579102, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.00000009415697
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4994589718579102, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
       propertyPath: m_RootOrder
@@ -1077,6 +1091,16 @@ Prefab:
       propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 1206513863}
+    - target: {fileID: 1236581521408254, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
+      propertyPath: m_Name
+      value: NotPokeball
+      objectReference: {fileID: 0}
+    - target: {fileID: 212522568107538490, guid: 7ec5e45bea4649f4cacc243d85535219,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a287e0d02cb5d949ba31baa482fc152,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
   m_IsPrefabParent: 0
