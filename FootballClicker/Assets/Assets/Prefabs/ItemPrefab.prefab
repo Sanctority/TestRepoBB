@@ -312,7 +312,7 @@ MonoBehaviour:
   _coinsCost: 500
   _gemsCost: 0
   _costsCoinsToBuyItem: 1
-  _itemID: 0
+  _itemID: 1
   _txtBuyItem: {fileID: 114819630617438888}
 --- !u!222 &222551373981682556
 CanvasRenderer:
