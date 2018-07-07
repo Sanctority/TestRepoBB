@@ -20,6 +20,18 @@ public class GooglePlayGamesScript : MonoBehaviour {
         Social.localUser.Authenticate(success => {});
     }
 
+    public static bool CheckIfLoggedIn()
+    {
+        if (PlayGamesPlatform.Instance.IsAuthenticated())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     #region Achievements
 
     public static void UnlockAchievement(string AchievementID)

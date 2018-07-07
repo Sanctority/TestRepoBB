@@ -38,7 +38,11 @@ namespace MainLevel
 
             GameManager._instance.UpdateCoins((int)(_scoreFloat *(_coinMultiplier * _eventMultiplier)));
 
-            GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
+            if (GooglePlayGamesScript.CheckIfLoggedIn() == true)
+            {
+                GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
+            }
+            
         }
     }
 }

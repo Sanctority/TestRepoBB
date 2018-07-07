@@ -689,6 +689,15 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 82e29f84c91e5574aad5f33fa32c9a43, type: 2}
+    - target: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885152445169040, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: _rotationSpeedOfBall
+      value: 130
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 23080917745811460, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
@@ -1173,6 +1182,15 @@ Prefab:
         type: 2}
       propertyPath: _bounceLimitUp
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236581521408254, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431764076794588, guid: 7ec5e45bea4649f4cacc243d85535219,
+        type: 2}
+      propertyPath: _rotationSpeedOfBall
+      value: 130
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ec5e45bea4649f4cacc243d85535219, type: 2}

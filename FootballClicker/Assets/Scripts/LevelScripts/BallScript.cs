@@ -15,6 +15,7 @@ public class BallScript : MonoBehaviour
     public PhysicsMaterial2D _physicsNoBounce;      // This material will stop the balle from being able to bounce.
     public int _bounceLimitUp;
     public int _bounceLimitDown;
+    public int _rotationSpeedOfBall;
 
     // Private variables.
     private Rigidbody2D _ballRB;
@@ -35,6 +36,8 @@ public class BallScript : MonoBehaviour
 
     private void Update()
     {
+
+        BallRotation();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -109,5 +112,10 @@ public class BallScript : MonoBehaviour
     {
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, 1);
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, 1);
+    }
+
+    private void BallRotation()
+    {
+        transform.Rotate(0, 0, Time.deltaTime * -_rotationSpeedOfBall);
     }
 }
