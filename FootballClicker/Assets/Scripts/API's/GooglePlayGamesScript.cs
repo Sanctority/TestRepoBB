@@ -1,6 +1,8 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
+#if UNITY_ANDROID
+
 
 public class GooglePlayGamesScript : MonoBehaviour {
 
@@ -65,3 +67,4 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     #endregion LeaderboardsEnd
 }
+#endif

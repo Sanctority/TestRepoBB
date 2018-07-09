@@ -37,12 +37,12 @@ namespace MainLevel
             GameManager._instance.SaveHighScore((int)_scoreFloat);
 
             GameManager._instance.UpdateCoins((int)(_scoreFloat *(_coinMultiplier * _eventMultiplier)));
-
+#if UNITY_ANDROID
             if (GooglePlayGamesScript.CheckIfLoggedIn() == true)
             {
                 GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
             }
-            
+#endif            
         }
     }
 }

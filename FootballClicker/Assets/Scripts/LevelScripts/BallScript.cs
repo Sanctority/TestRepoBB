@@ -110,8 +110,10 @@ public class BallScript : MonoBehaviour
     // This will be used to handle the achievments for kicking the ball
     private void AchievementIncrementKicker()
     {
+#if UNITY_ANDROID
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, 1);
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, 1);
+#endif
     }
 
     private void BallRotation()

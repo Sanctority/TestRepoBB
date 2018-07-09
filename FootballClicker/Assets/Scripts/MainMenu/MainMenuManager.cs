@@ -27,11 +27,15 @@ public class MainMenuManager : MonoBehaviour {
 
     public void ShowAchievements()
     {
+#if UNITY_ANDROID
         GooglePlayGamesScript.ShowAchievementsUI();
+#endif
     }
 
     public void ShowLeaderboards()
-    {
+    { 
+#if UNITY_ANDROID
         GooglePlayGamesScript.ShowLeaderboardsUI();
+#endif
     }
 }
