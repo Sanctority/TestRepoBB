@@ -63,6 +63,7 @@ public class ShopManager : MonoBehaviour {
                     _currentSelectedObject.GetComponent<ItemChecker>().UpdateText();
                     UpdateCoins();
                 }
+
             }
         }
         else if(_currentSelectedObject.GetComponent<ItemChecker>().ReturnIfBoughtWithCoins() == false)
