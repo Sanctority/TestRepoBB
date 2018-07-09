@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BallSkinChanger : MonoBehaviour {
-    // Keep uysing increments of 1
+    // Keep using increments of 1
 
     [SerializeField]
     private List<GameObject> _ballSkins;
@@ -14,7 +14,7 @@ public class BallSkinChanger : MonoBehaviour {
         {
             Skinners.SetActive(false);
         }
-
+        Debug.Log(PlayerPrefs.GetInt("Equipped"));
         _ballSkins[PlayerPrefs.GetInt("Equipped")].SetActive(true);
     }
 }

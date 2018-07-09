@@ -1,11 +1,11 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
-#if UNITY_ANDROID
+
 
 
 public class GooglePlayGamesScript : MonoBehaviour {
-
+#if UNITY_ANDROID
     private void Start()
     {
         PlayGamesClientConfiguration _config = new PlayGamesClientConfiguration.Builder().Build();
@@ -66,5 +66,5 @@ public class GooglePlayGamesScript : MonoBehaviour {
     }
 
     #endregion LeaderboardsEnd
-}
 #endif
+}
