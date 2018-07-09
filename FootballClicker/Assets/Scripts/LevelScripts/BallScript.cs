@@ -104,7 +104,7 @@ public class BallScript : MonoBehaviour
     private void GameOver()
     {
         _uiCanvas.gameObject.GetComponent<MainLevel.UiScript>().GameOver();
-        SceneManager.LoadSceneAsync("GameOver");
+        SceneManager.LoadScene("GameOver");
     }
 
     // This will be used to handle the achievments for kicking the ball
