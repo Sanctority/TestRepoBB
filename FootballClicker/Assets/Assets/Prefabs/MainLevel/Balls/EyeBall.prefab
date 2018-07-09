@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1236581521408254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.08, y: -0.61, z: -0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   _physicsNoBounce: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
   _bounceLimitUp: 3
   _bounceLimitDown: 1
+  _rotationSpeedOfBall: 130
 --- !u!212 &212122765825185010
 SpriteRenderer:
   m_ObjectHideFlags: 1
