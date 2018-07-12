@@ -1,29 +1,35 @@
-﻿using System.Collections;
+﻿using MainLevel;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyScroll : MonoBehaviour
 {
 
+    static UiScript uiScript;
+
     public float _minJumpTime;      // Minimum time before an enemy can jump
     public float _maxJumpTime;      // Maximum time for an enemy to jump
     public Vector2 _enemyImpulseUp; // Force applied to the jumping enemy
 
     [SerializeField]
-    public static float _speed;           // Basic movement speed // static so it changes in all instances of the class
+    public float _speed;           // Basic movement speed //static so that it changes all instances of the class
     private bool _canJump;
 
     private Rigidbody2D _enemyRB;
 
     void Start()
     {
+        uiScript = FindObjectOfType<UiScript>();
         _canJump = Random.Range(0, 2) == 0;                                 //50 50 chance to jump
         _enemyRB = GetComponent<Rigidbody2D>();
+        _speed += uiScript.ReturnScoreFloat() / 125f;                        //see UiScript.ReturnScoreFloat
     }
 
     void FixedUpdate()
     {
         transform.position += (Vector3.left * Time.deltaTime) * _speed;     //Basic movement that should be consistant
+
     }
 
     public void Jump()

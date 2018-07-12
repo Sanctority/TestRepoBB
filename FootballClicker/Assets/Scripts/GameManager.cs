@@ -72,11 +72,6 @@ public class GameManager : MonoBehaviour {
         return _highscore;
     }
 
-    public void RunAudio()
-    {
-       
-    }
-
     public int ReturnCoins()
     {
         return _coins;

@@ -12,6 +12,7 @@ namespace MainLevel
         public string _textBeforeScore;
 
         // Private variables.
+        [SerializeField]
         public float _scoreFloat;
 
         [SerializeField]
@@ -43,6 +44,11 @@ namespace MainLevel
                 GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
             }
 #endif            
+        }
+
+        public float ReturnScoreFloat() //breaks all encapsulation, Gamemanager should know the current score, not a UI script
+        {
+            return _scoreFloat;
         }
     }
 }
