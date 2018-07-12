@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Roof
   - ShopItem
+  - Gem
   layers:
   - Default
   - TransparentFX

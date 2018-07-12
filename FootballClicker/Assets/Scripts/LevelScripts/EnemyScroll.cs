@@ -6,24 +6,24 @@ using UnityEngine;
 public class EnemyScroll : MonoBehaviour
 {
 
-    static UiScript uiScript;
+    static UiScript _uiScript;
 
     public float _minJumpTime;      // Minimum time before an enemy can jump
     public float _maxJumpTime;      // Maximum time for an enemy to jump
     public Vector2 _enemyImpulseUp; // Force applied to the jumping enemy
 
     [SerializeField]
-    public float _speed;           // Basic movement speed //static so that it changes all instances of the class
+    public float _speed;           // Basic movement speed
     private bool _canJump;
 
     private Rigidbody2D _enemyRB;
 
     void Start()
     {
-        uiScript = FindObjectOfType<UiScript>();
+        _uiScript = FindObjectOfType<UiScript>();
         _canJump = Random.Range(0, 2) == 0;                                 //50 50 chance to jump
         _enemyRB = GetComponent<Rigidbody2D>();
-        _speed += uiScript.ReturnScoreFloat() / 125f;                        //see UiScript.ReturnScoreFloat
+        _speed += _uiScript.ReturnScoreFloat() / 125f;                        //see UiScript.ReturnScoreFloat
     }
 
     void FixedUpdate()

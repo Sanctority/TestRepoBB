@@ -12,6 +12,13 @@ public class EnemyDestroyer : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _spawnController.RemoveEnemyFromlist(collision.gameObject);
+        if (collision.tag == "Enemy")
+        {
+            _spawnController.RemoveEnemyFromlist(collision.gameObject);
+        }
+        else if(collision.tag == "Gem")
+        {
+            _spawnController.RemoveGem(collision.gameObject);
+        }
     }
 }

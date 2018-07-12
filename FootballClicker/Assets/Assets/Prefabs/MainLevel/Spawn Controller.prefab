@@ -54,5 +54,8 @@ MonoBehaviour:
   _minSpawnTime: 2
   _maxSpawnTime: 3
   _maxEnemies: 4
+  _canGemSpawn: 1
+  _uiScript: {fileID: 0}
   _enemyPrefabList:
   - {fileID: 1436407884750050, guid: 8ccc5a9b81ed45040a9847f683500f51, type: 2}
+  _gemPrefab: {fileID: 1442953202631700, guid: ade64f79b8796af4da122dc7ed1686d0, type: 2}
