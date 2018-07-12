@@ -10,7 +10,7 @@ public class EnemyScroll : MonoBehaviour
     public Vector2 _enemyImpulseUp; // Force applied to the jumping enemy
 
     [SerializeField]
-    private float _speed;           // Basic movement speed
+    public static float _speed;           // Basic movement speed // static so it changes in all instances of the class
     private bool _canJump;
 
     private Rigidbody2D _enemyRB;
