@@ -77,18 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -110,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!224 &2828668 stripped
 RectTransform:
@@ -168,12 +163,12 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 470
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -725
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -403,7 +398,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -419,7 +413,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -946,12 +939,12 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 790
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1275
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -1461,12 +1454,12 @@ Prefab:
     - target: {fileID: 114819630617438888, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114819630617438888, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114995962262219772, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
@@ -1482,7 +1475,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5a24df55f37483d44988eb32e1e17fd2,
+      objectReference: {fileID: 21300000, guid: 8b7d08140833bd34f84e2d337759db3f,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48425cc1a33c1f0439aaf3cf668d9009, type: 2}
@@ -1620,11 +1613,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!4 &1251889326
 Transform:
   m_ObjectHideFlags: 0
@@ -2621,12 +2614,12 @@ Prefab:
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: 470
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -725
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 224436461988966438, guid: 48425cc1a33c1f0439aaf3cf668d9009,
         type: 2}
