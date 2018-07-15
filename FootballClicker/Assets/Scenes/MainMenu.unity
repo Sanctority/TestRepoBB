@@ -979,27 +979,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.00000016620521
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.9387619
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.103771314
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.32727918
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.029084837
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -217.81099
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -7.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 169.79701
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ef6894b2d35c70489c54590ed768299, type: 3}
@@ -1279,13 +1291,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107397811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9486014, w: 0.3164734}
   m_LocalPosition: {x: -3.25, y: 3.47, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 143.1}
 --- !u!1 &1173317076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1380,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
