@@ -38,6 +38,8 @@ namespace MainLevel
             GameManager._instance.SaveHighScore((int)_scoreFloat);
 
             GameManager._instance.UpdateCoins((int)(_scoreFloat *(_coinMultiplier * _eventMultiplier)));
+
+            PlayerPrefs.SetInt("CoinsEarned", (int)(_scoreFloat * (_coinMultiplier * _eventMultiplier)));
 #if UNITY_ANDROID
             if (GooglePlayGamesScript.CheckIfLoggedIn() == true)
             {

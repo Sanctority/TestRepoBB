@@ -9,6 +9,7 @@ public class GameOverManager : MonoBehaviour {
     public TextMeshProUGUI _highscoreDisplayText;       // This will store a reference to the highscore text for use.
     public TextMeshProUGUI _previousDisplayText;
     public TextMeshProUGUI _gemsDisplayText;
+    public TextMeshProUGUI _coinsDisplayText;
 
     // Private variables.
     private GameManager _GM;                            // This will store a reference to the GameManager.
@@ -30,6 +31,7 @@ public class GameOverManager : MonoBehaviour {
         _highscoreDisplayText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
         _previousDisplayText.text = "Previous score: " + PlayerPrefs.GetInt("PreviousScore").ToString(); ;
         _gemsDisplayText.text = "Gems earned: " + _gemsEarned.ToString();
+        _coinsDisplayText.text = "Coins earned: " + PlayerPrefs.GetInt("CoinsEarned").ToString();
 
         _GM.UpdateGems(_gemsEarned);
 
