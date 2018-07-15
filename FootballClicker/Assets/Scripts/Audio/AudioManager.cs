@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
                 break;
             case 1:
                 {
-                    _audioSource.clip = _gameMusic;     // Change the clip
+                    _audioSource.clip = _spaceMusic;     // Change the clip
                 }
                 break;
             case 2:
@@ -72,7 +72,8 @@ public class AudioManager : MonoBehaviour
                 break;
             case 4:
                 {
-                    _audioSource.clip = _spaceMusic;     // Change the clip
+                    
+                    _audioSource.clip = _gameMusic;     // Change the clip
                 }
                 break;
         }
