@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip _mainMenuMusic;                // Main menu audio clip
     public AudioClip _gameMusic;                    // Main game audio clip
     public AudioClip _shopMusic;                    // Main shop audio clip
+    public AudioClip _gameOverMusic;                // Main space level audio clip
+    public AudioClip _spaceMusic;                   // Game Over audio clip
 
     // Private variables
     private AudioSource _audioSource;
@@ -61,6 +63,16 @@ public class AudioManager : MonoBehaviour
             case 2:
                 {
                     _audioSource.clip = _shopMusic;     // Change the clip
+                }
+                break;
+            case 3:
+                {
+                    _audioSource.clip = _gameOverMusic;     // Change the clip
+                }
+                break;
+            case 4:
+                {
+                    _audioSource.clip = _spaceMusic;     // Change the clip
                 }
                 break;
         }

@@ -96,7 +96,7 @@ MonoBehaviour:
   _physicsNoBounce: {fileID: 6200000, guid: 2d4fd48d8cc956b44828776f36802933, type: 2}
   _bounceLimitUp: 3
   _bounceLimitDown: 1
-  _rotationSpeedOfBall: 130
+  _rotationSpeedOfBall: 150
 --- !u!212 &212122765825185010
 SpriteRenderer:
   m_ObjectHideFlags: 1
