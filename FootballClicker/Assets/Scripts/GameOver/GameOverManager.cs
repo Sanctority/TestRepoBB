@@ -28,12 +28,21 @@ public class GameOverManager : MonoBehaviour {
     // This funciton is used to refresh the highscore text.
     private void UpdateHighscoreText()
     {
+<<<<<<< HEAD
         _highscoreDisplayText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
         _previousDisplayText.text = "Previous score: " + PlayerPrefs.GetInt("PreviousScore").ToString(); ;
         _gemsDisplayText.text = "Gems earned: " + _gemsEarned.ToString();
 
         _GM.UpdateGems(_gemsEarned);
 
+=======
+        _highscoreDisplayText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
+        _previousDisplayText.text = "Previous score: " + PlayerPrefs.GetInt("PreviousScore").ToString(); ;
+        _gemsDisplayText.text = "Gems earned: " + _gemsEarned.ToString();
+
+        _GM.UpdateGems(_gemsEarned);
+
+>>>>>>> 52b7fd22a4c2802d351f959e294a6e53ecb7812b
     #if UNITY_ANDROID
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, _numOfBounces);
         GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, _numOfBounces);
