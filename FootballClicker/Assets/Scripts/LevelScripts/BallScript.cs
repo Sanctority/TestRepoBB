@@ -21,8 +21,6 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D _ballRB;
     private int _numOfBouncesUp;
     private int _numOfBouncesDown;
-    private int _numOfBouncesMade;
-    private int _gemCount;
 
     
 
@@ -32,7 +30,7 @@ public class BallScript : MonoBehaviour
         _ballRB = GetComponent<Rigidbody2D>();
         _ballRB.sharedMaterial = _physicsHasBounce;
         _numOfBouncesUp = 0;
-        _numOfBouncesMade = 0;
+
         
     }
 
@@ -101,27 +99,21 @@ public class BallScript : MonoBehaviour
             _numOfBouncesUp = 0;
             _numOfBouncesDown = 0;
         }
-
-        if (collision.gameObject.tag == "Gem")
-        {
-            Destroy(collision.gameObject);
-            _gemCount++;
-        }
-
     }
 
     private void GameOver()
     {
         _uiCanvas.gameObject.GetComponent<MainLevel.UiScript>().GameOver();
-        PlayerPrefs.SetInt("Bounces",_numOfBouncesMade);
-        PlayerPrefs.SetInt("GemCount",_gemCount);
         SceneManager.LoadScene("GameOver");
     }
 
     // This will be used to handle the achievments for kicking the ball
     private void AchievementIncrementKicker()
     {
-        _numOfBouncesMade++;
+#if UNITY_ANDROID
+        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_noob, 1);
+        GooglePlayGamesScript.IncrementAchievement(GPGSIds.achievement_kicking_novice, 1);
+#endif
     }
 
     private void BallRotation()

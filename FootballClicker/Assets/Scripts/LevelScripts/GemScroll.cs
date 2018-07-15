@@ -11,9 +11,6 @@ public class GemScroll : MonoBehaviour {
 
     }
 
-    //disabling this and making it a collision like joe asked
-
-    /*
     private void OnMouseDown()
     {
         Ray _raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -25,5 +22,5 @@ public class GemScroll : MonoBehaviour {
                 Debug.LogError("IMPLEMENT GEMS");
             }
         }
-    }*/
+    }
 }
