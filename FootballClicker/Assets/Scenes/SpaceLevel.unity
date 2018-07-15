@@ -1055,7 +1055,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ballSkins:
   - {fileID: 817521851}
-  - {fileID: 0}
   - {fileID: 751978095}
   - {fileID: 1632917586}
 --- !u!4 &1611096207
