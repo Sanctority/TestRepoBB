@@ -194,6 +194,10 @@ Prefab:
       propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 1206513863}
+    - target: {fileID: 1917092816229494, guid: 6e32bb91b2f0b9c49b3634feda128549, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e32bb91b2f0b9c49b3634feda128549, type: 2}
   m_IsPrefabParent: 0
@@ -364,6 +368,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 27e24af937196cb4cbc8dfdde20c62ed, type: 2}
+    - target: {fileID: 1901463600969968, guid: 4c46b1e048004f041aa1e26d0995159b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c46b1e048004f041aa1e26d0995159b, type: 2}
   m_IsPrefabParent: 0
@@ -675,6 +683,10 @@ Prefab:
     - target: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
       propertyPath: m_Name
       value: Football
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
