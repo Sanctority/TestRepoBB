@@ -141,7 +141,7 @@ PlayerSettings:
   targetPixelDensity: 570
   resolutionScalingMode: 1
   applicationIdentifier:
-    Android: com.GEMSTUDIOS.FOOTBALLCLICKER
+    Android: com.GEMSTUDIOS.BOUNCYBOY
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -217,8 +217,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: E:/FootballClickerKeystore.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/John Smith/Desktop/FootballClickerKeystore.keystore
+  AndroidKeyaliasName: footballclickerkey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -232,7 +232,7 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 829553de0098b1a408f74163da72d666, type: 3}
+      m_Icon: {fileID: 2800000, guid: fc3f1e5677cb10e42874b5e2f2568323, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
