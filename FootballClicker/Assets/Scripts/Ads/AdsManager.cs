@@ -24,7 +24,7 @@ public class AdsManager : MonoBehaviour {
             string adUnitId = "unexpected_platform";
 #endif
 
-        _bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
+        _bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
 
         // Called when an ad request has successfully loaded.
         _bannerView.OnAdLoaded += HandleOnAdLoaded;
