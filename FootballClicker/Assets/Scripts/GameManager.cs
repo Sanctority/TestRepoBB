@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour {
         {
             PlayerPrefs.SetInt("0", 1);
             PlayerPrefs.SetInt("Equipped", 0);
-            PlayerPrefs.SetInt("Coins", 1000);
-            PlayerPrefs.SetInt("Gems", 100);
+            PlayerPrefs.SetInt("Coins", 0);
+            PlayerPrefs.SetInt("Gems", 0);
 
             PlayerPrefs.SetInt("FirstTimeLoad", 1);
         }
