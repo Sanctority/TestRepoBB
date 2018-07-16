@@ -14,7 +14,7 @@ public class BallSkinChanger : MonoBehaviour {
         {
             Skinners.SetActive(false);
         }
-        Debug.Log(PlayerPrefs.GetInt("Equipped"));
+        Debug.Log("Ball "+PlayerPrefs.GetInt("Equipped")+" equipped");
         _ballSkins[PlayerPrefs.GetInt("Equipped")].SetActive(true);
     }
 }
