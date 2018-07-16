@@ -57,7 +57,12 @@ public class FacebookScript : MonoBehaviour {
 
         if(_refreshTime >= 30)
         {
-            Refresh();
+
+            if(ReturnLoginStatus() == true)
+            {
+                Refresh();
+            }
+            
             _refreshTime = 0;
         }
     }
@@ -140,9 +145,9 @@ public class FacebookScript : MonoBehaviour {
 
             _friendsText.text = string.Empty;
 
-            foreach(var _diction in _friendsList)
+            foreach (var _diction in _friendsList)
             {
-                _friendsText.text += ((Dictionary<string,object>)_diction)["name"];
+                _friendsText.text += ((Dictionary<string, object>)_diction)["name"];
             }
         });
 
@@ -163,5 +168,19 @@ public class FacebookScript : MonoBehaviour {
             _facebookLoginButton.SetActive(true);
         }
         
+    }
+
+    public bool ReturnLoginStatus()
+    {
+        if (FB.IsLoggedIn)
+        {
+            _facebookLoginButton.SetActive(false);
+            return true;
+        }
+        else
+        {
+            _facebookLoginButton.SetActive(true);
+            return false;
+        }
     }
 }

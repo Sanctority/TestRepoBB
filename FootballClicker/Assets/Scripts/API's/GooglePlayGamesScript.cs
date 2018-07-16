@@ -8,6 +8,8 @@ public class GooglePlayGamesScript : MonoBehaviour {
 #if UNITY_ANDROID
     private void Start()
     {
+        PlayGamesPlatform.DebugLogEnabled = true;
+
         PlayGamesClientConfiguration _config = new PlayGamesClientConfiguration.Builder().Build();
 
         PlayGamesPlatform.InitializeInstance(_config);
@@ -38,17 +40,26 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     public static void UnlockAchievement(string AchievementID)
     {
-        Social.ReportProgress(AchievementID, 100, success => { });
+        if (Social.localUser.authenticated)
+        {
+            Social.ReportProgress(AchievementID, 100, success => { });
+        }
     }
 
     public static void IncrementAchievement(string AchievementID, int AchievementIncrement)
     {
-        PlayGamesPlatform.Instance.IncrementAchievement(AchievementID, AchievementIncrement, success => { });
+        if (Social.localUser.authenticated)
+        {
+            PlayGamesPlatform.Instance.IncrementAchievement(AchievementID, AchievementIncrement, success => { });
+        }
     }
 
     public static void ShowAchievementsUI()
     {
-        Social.ShowAchievementsUI();
+        if (Social.localUser.authenticated)
+        {
+            ((PlayGamesPlatform)Social.Active).ShowLeaderboardUI();
+        }
     }
 
     #endregion AchievementsEnd
@@ -57,12 +68,19 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     public static void AddScoreToLeaderboard(string LeaderboardID,long score)
     {
-        Social.ReportScore(score, LeaderboardID, success => { });
+        if (Social.localUser.authenticated)
+        {
+            Social.ReportScore(score, LeaderboardID, success => { });
+        }
+        
     }
 
     public static void ShowLeaderboardsUI()
     {
-        Social.ShowLeaderboardUI();
+        if (Social.localUser.authenticated)
+        {
+            ((PlayGamesPlatform)Social.Active).ShowLeaderboardUI(GPGSIds.leaderboard_highest_score);
+        }
     }
 
     #endregion LeaderboardsEnd
