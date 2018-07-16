@@ -114,7 +114,9 @@ public class BallScript : MonoBehaviour
         _uiCanvas.gameObject.GetComponent<MainLevel.UiScript>().GameOver();
         PlayerPrefs.SetInt("Bounces", _numOfBounces);
         PlayerPrefs.SetInt("GemsEarned", _gemsEarned);
-        SceneManager.LoadScene("GameOver");
+        SceneController._instance.SetLastScene(SceneManager.GetActiveScene().buildIndex);
+        SceneController._instance.SwapScene(3); //Game over scene
+        
     }
 
     // This will be used to handle the achievments for kicking the ball

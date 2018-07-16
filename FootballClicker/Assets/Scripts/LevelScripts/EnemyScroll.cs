@@ -23,7 +23,7 @@ public class EnemyScroll : MonoBehaviour
         _uiScript = FindObjectOfType<UiScript>();
         _canJump = Random.Range(0, 2) == 0;                                 //50 50 chance to jump
         _enemyRB = GetComponent<Rigidbody2D>();
-        _speed += _uiScript.ReturnScoreFloat() / 125f;                        //see UiScript.ReturnScoreFloat
+        _speed += _uiScript.ReturnScoreFloat() / 110f; //was 125            //see UiScript.ReturnScoreFloat
     }
 
     void FixedUpdate()
