@@ -157,6 +157,11 @@ Prefab:
       propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 1206513863}
+    - target: {fileID: 58358921583402956, guid: 6e32bb91b2f0b9c49b3634feda128549,
+        type: 2}
+      propertyPath: m_Radius
+      value: 4.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e32bb91b2f0b9c49b3634feda128549, type: 2}
   m_IsPrefabParent: 0
@@ -711,6 +716,11 @@ Prefab:
     - target: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
       propertyPath: m_Name
       value: ball_helmet
+      objectReference: {fileID: 0}
+    - target: {fileID: 58358921583402956, guid: d9745a7e2057252438efe5a2844a5775,
+        type: 2}
+      propertyPath: m_Radius
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9745a7e2057252438efe5a2844a5775, type: 2}
