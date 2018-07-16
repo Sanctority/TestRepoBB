@@ -58,7 +58,7 @@ public class GooglePlayGamesScript : MonoBehaviour {
     {
         if (Social.localUser.authenticated)
         {
-            ((PlayGamesPlatform)Social.Active).ShowLeaderboardUI();
+            ((PlayGamesPlatform)Social.Active).ShowAchievementsUI();
         }
     }
 

@@ -98,11 +98,14 @@ public class GameManager : MonoBehaviour {
     {
         if((PlayerPrefs.GetInt("Coins") - num) < 0)
         {
+            Debug.Log("No coins removed");
             return false;
         }
         else
         {
-            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + num);
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - num);
+            _coins = PlayerPrefs.GetInt("Coins");
+            Debug.Log("Coins removed: " + num);
             return true;
         }
     }
