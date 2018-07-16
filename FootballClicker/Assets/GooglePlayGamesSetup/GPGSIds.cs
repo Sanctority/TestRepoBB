@@ -25,8 +25,8 @@
 public static class GPGSIds
 {
         public const string achievement_kicking_noob = "CgkI3uvC3OoLEAIQAQ"; // <GPGSID>
-        public const string leaderboard_high_scores = "CgkI3uvC3OoLEAIQAA"; // <GPGSID>
         public const string achievement_kicking_novice = "CgkI3uvC3OoLEAIQAg"; // <GPGSID>
+        public const string leaderboard_highest_score = "CgkI3uvC3OoLEAIQAA"; // <GPGSID>
 
 }
 

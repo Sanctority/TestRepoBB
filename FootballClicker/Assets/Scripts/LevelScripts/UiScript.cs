@@ -43,7 +43,7 @@ namespace MainLevel
 #if UNITY_ANDROID
             if (GooglePlayGamesScript.CheckIfLoggedIn() == true)
             {
-                GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_high_scores, (long)_scoreFloat);
+                GooglePlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_highest_score, (long)_scoreFloat);
             }
 #endif            
         }
