@@ -22,7 +22,7 @@ public class SceneController : MonoBehaviour
 
     public void SwapScene(int sceneIndex)
     {
-        SceneManager.LoadSceneAsync(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void SetLastScene(int _lSI)
