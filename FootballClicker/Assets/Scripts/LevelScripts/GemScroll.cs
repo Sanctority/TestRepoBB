@@ -19,7 +19,7 @@ public class GemScroll : MonoBehaviour {
         {
             if (_raycastHit.collider.name == "Gem")
             {
-                Debug.LogError("IMPLEMENT GEMS");
+                FindObjectOfType<BallScript>().IncrementGems();
             }
         }
     }

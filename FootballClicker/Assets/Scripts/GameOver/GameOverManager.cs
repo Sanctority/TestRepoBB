@@ -22,6 +22,8 @@ public class GameOverManager : MonoBehaviour {
         _numOfBounces = PlayerPrefs.GetInt("Bounces");
         _GM = GameManager._instance;
         UpdateHighscoreText();
+
+        AdsManager._instance.RequestBanner();
     }
 
     // This funciton is used to refresh the highscore text.

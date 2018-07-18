@@ -3,17 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
-
+using UnityEngine.SceneManagement;
 public class AdsManager : MonoBehaviour {
 
+    public static AdsManager _instance;
     private BannerView _bannerView;
 
-    public void Start()
+    private void Awake()
     {
-        this.RequestBanner();
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    private void RequestBanner()
+    private void Start()
+    {
+        SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+    }
+
+    private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
+    {
+        if (_bannerView != null)
+        {
+            _bannerView.Hide();
+        }
+    }
+
+    public void RequestBanner()
     {
 
 #if UNITY_ANDROID
@@ -69,4 +92,6 @@ public class AdsManager : MonoBehaviour {
     {
         MonoBehaviour.print("HandleAdLeavingApplication event received");
     }
+
+    
 }

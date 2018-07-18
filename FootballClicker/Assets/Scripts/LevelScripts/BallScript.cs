@@ -102,11 +102,16 @@ public class BallScript : MonoBehaviour
             _numOfBouncesDown = 0;
         }
 
-        if(collision.gameObject.tag == "Gem")
-        {
-            Destroy(collision.gameObject);
-            _gemsEarned++;
-        }
+        //if(collision.gameObject.tag == "Gem")
+        //{
+        //    Destroy(collision.gameObject);
+        //    IncrementGems();
+        //}
+    }
+
+    public void IncrementGems()
+    {
+        _gemsEarned++;
     }
 
     private void GameOver()

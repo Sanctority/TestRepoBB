@@ -30,15 +30,15 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         // Instance of game manager end.
-    }
+    //}
 
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);                      // Make sure the Audio Source stays alive through scene changes
+    //private void Start()                                  // Doing the full initialisation in Awake instead of Start allows other scripts that are loaded first to access initialised public member variables
+    //{
+
         _audioSource = GetComponent<AudioSource>();
         SceneManager.activeSceneChanged += SceneChanged;    // Subscribe to the activeSceneChanged event
 
-        _audioSource.volume = 1f;                        // Set audio to a low amount, its still loud, might want to clamp it
+        _audioSource.volume = 1f;                           // Set audio to a low amount, its still loud, might want to clamp it
         _audioSource.loop = true;                           // Set audio to loop
         _audioSource.clip = _mainMenuMusic;                 // Audio Source will load on main menu when game loads, which does not call the activeSceneChanged event, so assign it here
         _audioSource.Play();                                // Play the menu music
@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
 
     private void SceneChanged(Scene current, Scene next)
     {
-        _audioSource.Stop();
+        //_audioSource.Stop();
         switch (next.buildIndex)
         {
             default:
@@ -72,11 +72,11 @@ public class AudioManager : MonoBehaviour
                 break;
             case 4:
                 {
-                    
                     _audioSource.clip = _gameMusic;     // Change the clip
                 }
                 break;
         }
+        _audioSource.enabled = true;
         _audioSource.Play();
     }
 
