@@ -48,7 +48,7 @@ namespace MainLevel
 #endif            
         }
 
-        public float ReturnScoreFloat() //breaks all encapsulation, Gamemanager should know the current score, not a UI script
+        public float ReturnScoreFloat() 
         {
             return _scoreFloat;
         }

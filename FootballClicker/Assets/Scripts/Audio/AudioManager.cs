@@ -84,4 +84,13 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.volume = _vol;             // Exposed function for setting volume which we can clamp
     }
+
+    public void Mute(bool _mute)
+    {
+        _audioSource.mute = _mute;
+    }
+    public bool GetMute()
+    {
+        return _audioSource.mute;
+    }
 }
