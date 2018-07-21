@@ -18,6 +18,14 @@ public class SpawnController : MonoBehaviour
     private Quaternion _spawnRotation;
     private List<GameObject> _spawnedEnemyList;     // This will hold a reference to any enemys that have been spawned into the level.
 
+    [SerializeField]
+    private float _baseSpeed;
+
+    [SerializeField]
+    private float _baseSpeedDivisable;
+
+    private float _levelTime;
+
     // Serialized so we can add prefabs.
     [SerializeField]
     private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
@@ -43,6 +51,8 @@ public class SpawnController : MonoBehaviour
             SpawnAGem();
             _canGemSpawn = false;
         }
+
+        _levelTime += Time.deltaTime;
     }
 
     private void EnemySpawnHandler()
@@ -61,6 +71,8 @@ public class SpawnController : MonoBehaviour
         GameObject Enemy = Instantiate(_enemyPrefabList[Random.Range(0, _enemyPrefabList.Count)], _spawnPosition, _spawnRotation, null);
 
         // Add anything else that needs to be instantiated here.
+
+        Enemy.GetComponent<EnemyScroll>()._speed = _baseSpeed + (_levelTime / _baseSpeedDivisable);
 
         _spawnedEnemyList.Add(Enemy);
     }
