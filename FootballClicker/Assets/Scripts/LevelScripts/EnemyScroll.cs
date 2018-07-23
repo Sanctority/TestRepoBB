@@ -11,7 +11,8 @@ public class EnemyScroll : MonoBehaviour
     public float _minJumpTime;      // Minimum time before an enemy can jump
     public float _maxJumpTime;      // Maximum time for an enemy to jump
     public float _enemyLowestImpuls; // Force applied to the jumping enemy
-    public float _enemyHighestImpulse; 
+    public float _enemyHighestImpulse;
+    public float _jumpChanceOutOf100;
 
     [SerializeField]
     public float _speed;           // Basic movement speed
@@ -22,7 +23,10 @@ public class EnemyScroll : MonoBehaviour
     void Start()
     {
         _uiScript = FindObjectOfType<UiScript>();
-        _canJump = Random.Range(0, 2) == 0;                                 //50 50 chance to jump
+        if (Random.Range(0, 101) >= _jumpChanceOutOf100)
+        {
+            _canJump = true;
+        }
         _enemyRB = GetComponent<Rigidbody2D>();
         _speed += _uiScript.ReturnScoreFloat() / 110f; //was 125            //see UiScript.ReturnScoreFloat
     }
