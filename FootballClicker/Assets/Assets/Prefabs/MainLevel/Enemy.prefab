@@ -101,7 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minJumpTime: 0.5
   _maxJumpTime: 2.5
-  _enemyImpulseUp: {x: 0, y: 15}
+  _enemyLowestImpuls: 5
+  _enemyHighestImpulse: 20
   _speed: 5
 --- !u!212 &212753808895459984
 SpriteRenderer:
