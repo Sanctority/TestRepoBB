@@ -10,6 +10,7 @@ TagManager:
   - Roof
   - ShopItem
   - Gem
+  - Ball
   layers:
   - Default
   - TransparentFX

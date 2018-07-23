@@ -12,8 +12,11 @@ public class ItemChecker : MonoBehaviour {
     [SerializeField]
     private bool _costsCoinsToBuyItem;
 
+    // ball id stuff
+    private enum _itemEnumID { HelmetBall, SpikeBall, BombBall }; // item ids go here.
+
     [SerializeField]
-    private int _itemID;
+    private _itemEnumID _chosenID;
 
     [SerializeField]
     private TextMeshProUGUI _txtBuyItem;
@@ -26,10 +29,10 @@ public class ItemChecker : MonoBehaviour {
     public void UpdateText()
     {
 
-        if (PlayerPrefs.GetInt(_itemID.ToString()) == 1)
+        if (PlayerPrefs.GetInt(_chosenID.ToString()) == 1)
         {
 
-            if(PlayerPrefs.GetInt("Equipped") == _itemID)
+            if(PlayerPrefs.GetString("Equipped") == _chosenID.ToString())
             {
                 _txtBuyItem.text = "Equipped";
             }
@@ -56,5 +59,10 @@ public class ItemChecker : MonoBehaviour {
     public bool ReturnIfBoughtWithCoins()
     {
         return _costsCoinsToBuyItem;
+    }
+
+    public string ReturnEnumString()
+    {
+        return _chosenID.ToString();
     }
 }

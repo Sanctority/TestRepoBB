@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 212133174198659922}
   m_Layer: 0
   m_Name: BombBall
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917092816229494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08412981, y: -0.5932586, z: 0}
+  m_LocalPosition: {x: -0.0713768, y: -0.5891545, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _chosenID: 2
 --- !u!212 &212133174198659922
 SpriteRenderer:
   m_ObjectHideFlags: 1

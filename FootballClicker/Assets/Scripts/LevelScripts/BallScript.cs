@@ -24,7 +24,11 @@ public class BallScript : MonoBehaviour
     private int _gemsEarned;
     private int _numOfBounces;
 
-    
+    // ball id stuff
+    private enum _itemEnumID { HelmetBall, SpikeBall, BombBall }; // item ids go here.
+
+    [SerializeField]
+    private _itemEnumID _chosenID;
 
     private void Start()
     {
@@ -133,5 +137,10 @@ public class BallScript : MonoBehaviour
     private void BallRotation()
     {
         transform.Rotate(0, 0, Time.deltaTime * -_rotationSpeedOfBall);
+    }
+
+    public string ReturnBallID()
+    {
+        return _chosenID.ToString();
     }
 }

@@ -319,11 +319,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ba2fc5aa6439d84889d50f69cb91a32, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &548063934 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1917092816229494, guid: 6e32bb91b2f0b9c49b3634feda128549,
-    type: 2}
-  m_PrefabInternal: {fileID: 292738764}
 --- !u!4 &548063939 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4724528783198230, guid: 6e32bb91b2f0b9c49b3634feda128549,
@@ -373,11 +368,6 @@ Prefab:
       propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 1206513863}
-    - target: {fileID: 23441681969165890, guid: 4c46b1e048004f041aa1e26d0995159b,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 27e24af937196cb4cbc8dfdde20c62ed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c46b1e048004f041aa1e26d0995159b, type: 2}
   m_IsPrefabParent: 0
@@ -386,11 +376,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4912862090807596, guid: 4c46b1e048004f041aa1e26d0995159b,
     type: 2}
   m_PrefabInternal: {fileID: 751978093}
---- !u!1 &817521851 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1917092816229494, guid: d9745a7e2057252438efe5a2844a5775,
-    type: 2}
-  m_PrefabInternal: {fileID: 1187119633}
 --- !u!4 &817521857 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4724528783198230, guid: d9745a7e2057252438efe5a2844a5775,
@@ -881,11 +866,6 @@ MonoBehaviour:
   _scoreFloat: 0
   _coinMultiplier: 0.5
   _eventMultiplier: 1
---- !u!1 &1292406323 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1901463600969968, guid: 4c46b1e048004f041aa1e26d0995159b,
-    type: 2}
-  m_PrefabInternal: {fileID: 751978093}
 --- !u!1001 &1351928973
 Prefab:
   m_ObjectHideFlags: 0
@@ -1110,10 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca0aa94edc9bde45b2c8c8a42e8d486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballSkins:
-  - {fileID: 817521851}
-  - {fileID: 1292406323}
-  - {fileID: 548063934}
+  _ballSkins: []
 --- !u!4 &1611096207
 Transform:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 212133174198659922}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _chosenID: 0
 --- !u!212 &212133174198659922
 SpriteRenderer:
   m_ObjectHideFlags: 1

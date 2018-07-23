@@ -31,27 +31,27 @@ public class ShopManager : MonoBehaviour {
         UpdateGems();
     }
 
-    public void BuyItem(int ItemID)
+    public void BuyItem()
     {
         _currentSelectedObject = EventSystem.current.currentSelectedGameObject;
 
-        if(PlayerPrefs.GetInt(ItemID.ToString()) != 1)
+        if(PlayerPrefs.GetInt(_currentSelectedObject.GetComponent<ItemChecker>().ReturnEnumString()) != 1)
         {
-            UnlockItem(ItemID);
+            UnlockItem(_currentSelectedObject.GetComponent<ItemChecker>().ReturnEnumString());
             UpdateCoins();
             Debug.Log("buying item");
         }
         else
         {
-            PlayerPrefs.SetInt("Equipped", ItemID);
+            PlayerPrefs.SetString("Equipped", _currentSelectedObject.GetComponent<ItemChecker>().ReturnEnumString());
             UpdateAllShopItemText();
         }
         
     }
 
-    private void UnlockItem(int num)        // this function will be used to unlock the ball if the player has the right amount of coins or gems
+    private void UnlockItem(string IdNum)        // this function will be used to unlock the ball if the player has the right amount of coins or gems
     {
-        int _holder = num;
+        string _holder = IdNum;
         
         if(_currentSelectedObject.GetComponent<ItemChecker>().ReturnIfBoughtWithCoins() == true)
         {

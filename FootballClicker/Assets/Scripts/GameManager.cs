@@ -36,14 +36,14 @@ public class GameManager : MonoBehaviour {
     {
         //PlayerPrefs.SetInt("FirstTimeLoad", 0);
 
-        if (PlayerPrefs.GetInt("FirstTimeLoad") != 1)
+        if (PlayerPrefs.GetInt("FirstTimeLoadv1") != 1)
         {
-            PlayerPrefs.SetInt("0", 1);
-            PlayerPrefs.SetInt("Equipped", 0);
-            PlayerPrefs.SetInt("Coins", 0);
+            PlayerPrefs.SetInt("HelmetBall", 1);
+            PlayerPrefs.SetString("Equipped", "HelmetBall");
+            PlayerPrefs.SetInt("Coins", 1000);
             PlayerPrefs.SetInt("Gems", 0);
 
-            PlayerPrefs.SetInt("FirstTimeLoad", 1);
+            PlayerPrefs.SetInt("FirstTimeLoadv1", 1);
         }
         
 
