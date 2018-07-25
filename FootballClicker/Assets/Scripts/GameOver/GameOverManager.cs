@@ -49,12 +49,23 @@ public class GameOverManager : MonoBehaviour {
 
     public void Continue()
     {
-        if (GameManager._instance.BuyItemGems(0))
+        if (GameManager._instance.GetCanContinue())
         {
-            Debug.LogError("CHANGE THE GEM COST");
-            GameManager._instance.SetContinue(true);
-            SceneController._instance.ReplayLastLevel();
+            if (GameManager._instance.BuyItemGems(0))
+            {
+                Debug.LogError("CHANGE THE GEM COST");
+                GameManager._instance.SetContinue(true);
+                SceneController._instance.ReplayLastLevel();
+                GameManager._instance.SetCanContinue(false);
+            }
         }
+    }
+
+   public void PlayAgain()
+    {
+        GameManager._instance.SetContinue(false);
+        GameManager._instance.SetCanContinue(false);
+        SceneController._instance.ReplayLastLevel();
     }
 
     // This funciton is used to refresh the highscore text.

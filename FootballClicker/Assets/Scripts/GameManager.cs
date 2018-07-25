@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
     private int _endOfLevelScore;   // This will be used to store the score that the player will get at the end of the level.
     private int _coins;
     private int _gems;
+
+    private bool _canContinue;
     private bool _continue;     //maybe change this
 
     private void Awake()
@@ -133,5 +135,16 @@ public class GameManager : MonoBehaviour {
     {
         return _continue;
     }
+
+    public void SetCanContinue(bool _canCont)
+    {
+        _canContinue = _canCont;
+    }
+
+    public bool GetCanContinue()
+    {
+        return _canContinue;
+    }
+
     #endregion get and set functions end
 }

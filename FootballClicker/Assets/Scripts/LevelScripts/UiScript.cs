@@ -31,6 +31,8 @@ namespace MainLevel
             else
             {
                 _scoreFloat = 0;
+                GameManager._instance.SetContinue(true);
+                GameManager._instance.SetCanContinue(true);
             }
             
             _scoreText.text = _textBeforeScore + _scoreFloat.ToString();
