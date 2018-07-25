@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class GameOverManager : MonoBehaviour {
+
+    private readonly int GEMSFORAD = 1;
 
     // Public variables.
     public TextMeshProUGUI _highscoreDisplayText;       // This will store a reference to the highscore text for use.
@@ -24,6 +27,34 @@ public class GameOverManager : MonoBehaviour {
         UpdateHighscoreText();
 
         AdsManager._instance.RequestBanner();
+        AdsManager._instance.RequestRewardBasedVideo();
+    }
+
+    public void RequestRewardAd()
+    {
+        if (AdsManager._instance._rewardBasedVideo.IsLoaded())
+        {
+            AdsManager._instance._rewardBasedVideo.Show();
+            AdsManager._instance._rewardBasedVideo.OnAdRewarded += _rewardBasedVideo_OnAdRewarded;
+        }
+
+    }
+
+    private void _rewardBasedVideo_OnAdRewarded(object sender, GoogleMobileAds.Api.Reward e)
+    {
+        GameManager._instance.UpdateGems(GEMSFORAD);
+        _gemsEarned += GEMSFORAD;
+        _gemsDisplayText.text = "Gems earned: " + _gemsEarned.ToString();
+    }
+
+    public void Continue()
+    {
+        if (GameManager._instance.BuyItemGems(0))
+        {
+            Debug.LogError("CHANGE THE GEM COST");
+            GameManager._instance.SetContinue(true);
+            SceneController._instance.ReplayLastLevel();
+        }
     }
 
     // This funciton is used to refresh the highscore text.

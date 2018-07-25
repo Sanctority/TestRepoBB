@@ -23,7 +23,16 @@ namespace MainLevel
 
         private void Start()
         {
-            _scoreFloat = 0;
+            if (GameManager._instance.GetContinue())
+            {
+                _scoreFloat = PlayerPrefs.GetInt("PreviousScore");
+                GameManager._instance.SetContinue(false);
+            }
+            else
+            {
+                _scoreFloat = 0;
+            }
+            
             _scoreText.text = _textBeforeScore + _scoreFloat.ToString();
         }
 
