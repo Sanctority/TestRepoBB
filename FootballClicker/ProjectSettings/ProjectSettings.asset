@@ -38,11 +38,13 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 98d92deed3881744ba169b5991f0ee93, type: 3}
+  - logo: {fileID: 21300000, guid: 8ccd86886755ba34daaacc21e1d0cb1a, type: 3}
     duration: 2
-  m_SplashScreenBackgroundLandscape: {fileID: 0}
+  m_SplashScreenBackgroundLandscape: {fileID: 1, guid: 00000000000000000000000000000000,
+    type: 0}
   m_SplashScreenBackgroundPortrait: {fileID: 0}
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 8ccd86886755ba34daaacc21e1d0cb1a,
+    type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -123,7 +125,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.1
+  bundleVersion: 1.3
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -145,7 +147,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.GEMSTUDIOS.BOUNCYBOY
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -219,8 +221,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/jonathan/Desktop/FootballClickerKeystore.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/John Smith/Desktop/FootballClickerKeystore.keystore
+  AndroidKeyaliasName: footballclickerkey
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 0
