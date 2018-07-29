@@ -16,7 +16,7 @@ public class BallScript : MonoBehaviour
     public int _bounceLimitUp;
     public int _bounceLimitDown;
     public int _rotationSpeedOfBall;
-
+    public bool _protected;
     // Private variables.
     private Rigidbody2D _ballRB;
     private int _numOfBouncesUp;
@@ -36,7 +36,7 @@ public class BallScript : MonoBehaviour
         _ballRB = GetComponent<Rigidbody2D>();
         _ballRB.sharedMaterial = _physicsHasBounce;
         _numOfBouncesUp = 0;
-
+        _protected = false;
         
     }
 
@@ -97,7 +97,10 @@ public class BallScript : MonoBehaviour
         // Footballer enemy collision starts.
         if (collision.gameObject.tag == "Enemy")
         {
-            GameOver();
+            if (!_protected)
+            {
+                GameOver();
+            }
         }
 
         if(collision.gameObject.tag == "Ground")
