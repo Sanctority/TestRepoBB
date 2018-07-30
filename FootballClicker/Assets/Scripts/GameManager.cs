@@ -97,6 +97,11 @@ public class GameManager : MonoBehaviour {
         _gems = PlayerPrefs.GetInt("Gems");
     }
 
+    public void SetGems(int num)
+    {
+        PlayerPrefs.SetInt("Gems", num);
+    }
+
     public bool BuyItemCoins(int num)
     {
         if((PlayerPrefs.GetInt("Coins") - num) < 0)
