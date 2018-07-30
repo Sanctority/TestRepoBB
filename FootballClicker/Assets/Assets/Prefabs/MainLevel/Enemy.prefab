@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minJumpTime: 0.5
   _maxJumpTime: 2.5
-  _enemyLowestImpuls: 5
-  _enemyHighestImpulse: 20
+  _enemyLowestImpuls: 8
+  _enemyHighestImpulse: 17
   _jumpChanceOutOf100: 25
   _speed: 5
 --- !u!212 &212753808895459984

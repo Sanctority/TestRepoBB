@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour {
     private int _coins;
     private int _gems;
 
+    private bool _canContinue;
+    private bool _continue;     //maybe change this
+
     private void Awake()
     {
         // Instance of game manager start.
@@ -123,6 +126,25 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void SetContinue(bool _cont)
+    {
+        _continue = _cont;
+    }
+
+    public bool GetContinue()
+    {
+        return _continue;
+    }
+
+    public void SetCanContinue(bool _canCont)
+    {
+        _canContinue = _canCont;
+    }
+
+    public bool GetCanContinue()
+    {
+        return _canContinue;
+    }
 
     #endregion get and set functions end
 }

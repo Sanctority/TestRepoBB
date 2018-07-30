@@ -13,7 +13,7 @@ public class ItemChecker : MonoBehaviour {
     private bool _costsCoinsToBuyItem;
 
     // ball id stuff
-    private enum _itemEnumID { HelmetBall, SpikeBall, BombBall }; // item ids go here.
+    private enum _itemEnumID { HelmetBall, SpikeBall, BombBall, DivingBall }; // item ids go here.
 
     [SerializeField]
     private _itemEnumID _chosenID;
