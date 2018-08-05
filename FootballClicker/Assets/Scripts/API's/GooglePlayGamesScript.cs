@@ -1,16 +1,25 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
+using GooglePlayGames.BasicApi.SavedGame;
+using System.Text;
 
 
 
 public class GooglePlayGamesScript : MonoBehaviour {
 #if UNITY_ANDROID
+
+    public static GooglePlayGamesScript Instance { get; private set; }
+
     private void Start()
     {
+        Instance = this;
+
         PlayGamesPlatform.DebugLogEnabled = true;
 
-        PlayGamesClientConfiguration _config = new PlayGamesClientConfiguration.Builder().Build();
+        PlayGamesClientConfiguration _config = new PlayGamesClientConfiguration.Builder()
+            .EnableSavedGames()
+            .Build();
 
         PlayGamesPlatform.InitializeInstance(_config);
 
@@ -84,5 +93,55 @@ public class GooglePlayGamesScript : MonoBehaviour {
     }
 
     #endregion LeaderboardsEnd
+
+    #region Saved Games
+
+    void ShowSelectUI()
+    {
+        uint maxNumToDisplay = 1;
+        bool allowCreateNew = false;
+        bool allowDelete = true;
+
+        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+        savedGameClient.ShowSelectSavedGameUI("Select saved game",
+            maxNumToDisplay,
+            allowCreateNew,
+            allowDelete,
+            OnSavedGameSelected);
+    }
+
+
+    public void OnSavedGameSelected(SelectUIStatus status, ISavedGameMetadata game)
+    {
+        if (status == SelectUIStatus.SavedGameSelected)
+        {
+            // handle selected game save
+        }
+        else
+        {
+            // handle cancel or error
+        }
+    }
+
+    void OpenSavedGame(string filename)
+    {
+        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+        savedGameClient.OpenWithAutomaticConflictResolution(filename, DataSource.ReadCacheOrNetwork,
+            ConflictResolutionStrategy.UseLongestPlaytime, OnSavedGameOpened);
+    }
+
+    public void OnSavedGameOpened(SavedGameRequestStatus status, ISavedGameMetadata game)
+    {
+        if (status == SavedGameRequestStatus.Success)
+        {
+            // handle reading or writing of saved game.
+        }
+        else
+        {
+            // handle error
+        }
+    }
+
+    #endregion Saved Games End
 #endif
 }
