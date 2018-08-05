@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)/*||Input.anyKeyDown*/)
+        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)||Input.anyKeyDown)
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             foreach (RaycastHit2D hit in hits)
