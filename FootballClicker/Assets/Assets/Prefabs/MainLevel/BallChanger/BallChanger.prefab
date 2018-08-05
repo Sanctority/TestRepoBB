@@ -306,7 +306,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 4.1
 --- !u!58 &58564940721003200
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -371,6 +371,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _protected: 0
   _chosenID: 3
 --- !u!114 &114513019216962282
 MonoBehaviour:
@@ -391,6 +392,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _protected: 0
   _chosenID: 2
 --- !u!114 &114673956759743342
 MonoBehaviour:
@@ -411,6 +413,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _protected: 0
   _chosenID: 1
 --- !u!114 &114893679457176492
 MonoBehaviour:
@@ -446,6 +449,7 @@ MonoBehaviour:
   _bounceLimitUp: 1
   _bounceLimitDown: 1
   _rotationSpeedOfBall: 150
+  _protected: 0
   _chosenID: 0
 --- !u!212 &212152899257525114
 SpriteRenderer:
