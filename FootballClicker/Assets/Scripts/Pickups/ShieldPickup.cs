@@ -30,14 +30,16 @@ public class ShieldPickup : PickupBase {
         _player.GetComponent<BallScript>()._protected = true;
         _collected = true;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "Enemy" && _collected)
+        if (collider.gameObject.tag == "Enemy" && _collected)
         {
-            collision.collider.enabled = false;
+            Debug.Log("Shield hit an enemy: "+collider.name);
+            collider.enabled = false;
             _player.GetComponent<BallScript>()._protected = false;
-            DestroyImmediate(this);
+            Destroy(gameObject);
         }
+        
     }
 
 }

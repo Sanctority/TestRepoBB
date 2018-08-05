@@ -2,25 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GemScroll : MonoBehaviour {
+public class GemScroll : PickupBase {
 
-    public float _speed = 4f;           // Basic movement speed
-    void FixedUpdate()
+    public override void FixedUpdate()
     {
+        base.FixedUpdate();
         transform.position += (Vector3.left * Time.deltaTime) * _speed;     //Basic movement that should be consistant
-
     }
 
-    private void OnMouseDown()
+    public override void Activate()
     {
-        Ray _raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-        RaycastHit _raycastHit;
-        if (Physics.Raycast(_raycast, out _raycastHit))
-        {
-            if (_raycastHit.collider.name == "Gem")
-            {
-                FindObjectOfType<BallScript>().IncrementGems();
-            }
-        }
+        FindObjectOfType<BallScript>().IncrementGems();
     }
 }

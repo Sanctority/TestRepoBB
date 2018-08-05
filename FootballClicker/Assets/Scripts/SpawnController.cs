@@ -52,14 +52,14 @@ public class SpawnController : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (_gemCounter > 100)
+        if (_gemCounter > 100f)
         {
             Debug.Log("Spawning gem");
             SpawnAGem();
             _gemCounter = 0f;
         }
 
-        if (_pickupCounter > 30)
+        if (_pickupCounter > 30f)
         {
             Debug.Log("Spawning powerup");
             SpawnAPowerUp();

@@ -55,6 +55,31 @@ public class GameManager : MonoBehaviour {
         _gems = PlayerPrefs.GetInt("Gems");
     }
 
+    private void Update()
+    {
+        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)/*||Input.anyKeyDown*/)
+        {
+            RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            foreach (RaycastHit2D hit in hits)
+            {
+                Debug.Log(hit.collider.tag);
+                if (hit.collider.tag == "Pickup")
+                {
+                    try
+                    {
+                        hit.collider.gameObject.GetComponent<PickupBase>().Activate();
+                    }
+                    catch (System.Exception)
+                    {
+
+                        //error report or something
+                    }
+                }
+            }
+        }
+    }
+
+
     #region Get and set functions
 
     public void SaveHighScore(int num)
