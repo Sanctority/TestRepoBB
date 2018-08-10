@@ -19,14 +19,12 @@ public class ShieldPickup : PickupBase {
         {
             base.FixedUpdate();
         }
-        else
-        {
-            transform.position = _player.transform.position;
-        }
+
 	}
 
     public override void Activate()
     {
+        gameObject.transform.parent.SetParent(_player.transform);
         _player.GetComponent<BallScript>()._protected = true;
         _collected = true;
     }
