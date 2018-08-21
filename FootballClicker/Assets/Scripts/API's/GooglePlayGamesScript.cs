@@ -11,9 +11,26 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     public static GooglePlayGamesScript Instance { get; private set; }
 
+    const string _saveName = "BouncyBoySave";
+    const string _gemSave = "PlayersGems";
+
+    bool _isSaving;
+
+    bool _isGemCloudDataLoaded;
+
     private void Start()
     {
         Instance = this;
+
+        if (!PlayerPrefs.HasKey(_saveName))
+        {
+            PlayerPrefs.SetString(_saveName, "0");
+        }
+
+        if (!PlayerPrefs.HasKey("FirstTimeSave"))
+        {
+            PlayerPrefs.SetInt("FirstTimeSave", 1);
+        }
 
         PlayGamesPlatform.DebugLogEnabled = true;
 
@@ -95,6 +112,82 @@ public class GooglePlayGamesScript : MonoBehaviour {
     #endregion LeaderboardsEnd
 
     #region Saved Games
+
+    private string GemsToString()
+    {
+        return GameManager._instance.ReturnGems().ToString();
+    }
+
+    void GemsStringToGameData(string cloudData, string localData)
+    {
+        if(PlayerPrefs.GetInt("FirstTimeSave") == 1)
+        {
+            PlayerPrefs.SetInt("FirstTimeSave", 0);
+
+            if(int.Parse(localData) > int.Parse(cloudData))
+            {
+                GameManager._instance.SetGems(int.Parse(localData));
+                _isGemCloudDataLoaded = true;
+                SaveData();
+                return;
+            }
+        }
+        else
+        {
+            GameManager._instance.SetGems(int.Parse(cloudData));
+            _isGemCloudDataLoaded = true;
+        }
+        
+    }
+
+    void GemsStringToGameData(string localData)
+    {
+        _isGemCloudDataLoaded = false;
+        GameManager._instance.SetGems(0);
+    }
+
+    public void GemsLoadData()
+    {
+        if (Social.localUser.authenticated)
+        {
+            _isSaving = false;
+            ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithManualConflictResolution(_gemSave, DataSource.ReadCacheOrNetwork, true, GemsResolveConflict, GemsSaveOpened);
+        }
+
+    }
+
+    public void SaveData()
+    {
+        if (!_isGemCloudDataLoaded)
+        {
+            return;
+        }
+
+        if (Social.localUser.authenticated)
+        {
+            _isSaving = true;
+            ((PlayGamesPlatform)Social.Active).SavedGame.OpenWithManualConflictResolution(_gemSave, DataSource.ReadCacheOrNetwork, true, GemsResolveConflict, GemsSaveOpened);
+        }
+    }
+
+    private void GemsResolveConflict(IConflictResolver resolver,ISavedGameMetadata original,byte[] originalData,ISavedGameMetadata unmerged, byte[] unmergedData)
+    {
+        if(originalData == null)
+        {
+            resolver.ChooseMetadata(unmerged);
+        }
+        else if(unmergedData == null)
+        {
+            resolver.ChooseMetadata(original);
+        }
+        else
+        {
+            resolver.ChooseMetadata(original);
+            return;
+        }
+
+        resolver.ChooseMetadata(original);
+    }
 
     void ShowSelectUI()
     {
