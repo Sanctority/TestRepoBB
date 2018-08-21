@@ -8,7 +8,8 @@ public class SpawnController : MonoBehaviour
     public float _minSpawnTime;
     public float _maxSpawnTime;
     public float _maxEnemies;
-    public bool _canGemSpawn;
+    public float _gemCounter;
+    public float _pickupCounter;
     // Private variables.
     [SerializeField]
     private MainLevel.UiScript _uiScript;
@@ -31,6 +32,8 @@ public class SpawnController : MonoBehaviour
     private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
     [SerializeField]
     private GameObject _gemPrefab;
+    [SerializeField]
+    private List<GameObject> _powerUpPrefabList;
 
     void Start()
     {
@@ -41,17 +44,30 @@ public class SpawnController : MonoBehaviour
 
         Invoke("EnemySpawnHandler", Random.Range(_minSpawnTime, _maxSpawnTime)); // Start Spawning an enemy after a random time
         _uiScript = FindObjectOfType<MainLevel.UiScript>();
+
+        _gemCounter = 0f;
+        _pickupCounter = 0f;
     }
 
     void FixedUpdate()
     {
 
-        if (Mathf.RoundToInt(_uiScript.ReturnScoreFloat()) == 100 && _canGemSpawn)
+        if (_gemCounter > 100f)
         {
+            Debug.Log("Spawning gem");
             SpawnAGem();
-            _canGemSpawn = false;
+            _gemCounter = 0f;
         }
 
+        if (_pickupCounter > 3f)
+        {
+            Debug.Log("Spawning powerup");
+            SpawnAPowerUp();
+            _pickupCounter = 0f;
+        }
+
+        _gemCounter += Time.deltaTime;
+        _pickupCounter += Time.deltaTime;
         _levelTime += Time.deltaTime;
     }
 
@@ -82,6 +98,11 @@ public class SpawnController : MonoBehaviour
         Instantiate(_gemPrefab, new Vector2(_spawnPosition.x, 0), _spawnRotation, null);
     }
 
+    private void SpawnAPowerUp()
+    {
+        Instantiate(_powerUpPrefabList[Random.Range(0, _powerUpPrefabList.Count)], new Vector2(_spawnPosition.x, 0), _spawnRotation, null);
+    }
+
     public void RemoveEnemyFromlist(GameObject _enemy)
     {
         Destroy(_enemy);
@@ -91,6 +112,5 @@ public class SpawnController : MonoBehaviour
     public void RemoveGem(GameObject _gem)
     {
         Destroy(_gem);
-        _canGemSpawn = true;
     }
 }

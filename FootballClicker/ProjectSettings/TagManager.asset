@@ -11,6 +11,7 @@ TagManager:
   - ShopItem
   - Gem
   - Ball
+  - Pickup
   layers:
   - Default
   - TransparentFX

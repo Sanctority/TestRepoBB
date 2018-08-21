@@ -51,7 +51,7 @@ public class GameOverManager : MonoBehaviour {
     {
         if (GameManager._instance.GetCanContinue())
         {
-            if (GameManager._instance.BuyItemGems(0))
+            if (GameManager._instance.BuyItemGems(3))
             {
                 Debug.LogError("CHANGE THE GEM COST");
                 GameManager._instance.SetContinue(true);

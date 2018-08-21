@@ -145,7 +145,10 @@ PlayerSettings:
     enable360StereoCapture: 0
   protectGraphicsMemory: 0
   useHDRDisplay: 0
+<<<<<<< HEAD
   m_ColorGamuts: 00000000
+=======
+>>>>>>> ad10985bf570169646414f55f059a7342520ee5e
   targetPixelDensity: 30
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
@@ -168,7 +171,11 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask: 214
   iPhoneSdkVersion: 988
+<<<<<<< HEAD
   iOSTargetOSVersionString: 8.0
+=======
+  iOSTargetOSVersionString: 7.0
+>>>>>>> ad10985bf570169646414f55f059a7342520ee5e
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0

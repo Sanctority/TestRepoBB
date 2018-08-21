@@ -3,32 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldPickup : PickupBase {
-
     CircleCollider2D _circleCollider2D;
 	// Use this for initialization
 	public override void Start () {
         base.Start();
+        //transform.localScale = _player.transform.localScale;
         _circleCollider2D = GetComponent<CircleCollider2D>();
-        _circleCollider2D.radius = _player.GetComponent<CircleCollider2D>().radius + _player.GetComponent<CircleCollider2D>().radius*0.01f;
+        //_circleCollider2D.radius = _player.GetComponent<CircleCollider2D>().radius + _player.GetComponent<CircleCollider2D>().radius*0.01f;
 	}
 	
 	// Update is called once per frame
 	public override void FixedUpdate () {
-        base.Start();
+
+        if (!_collected)
+        {
+            base.FixedUpdate();
+        }
+
 	}
 
     public override void Activate()
     {
+        gameObject.transform.parent.SetParent(_player.transform);
         _player.GetComponent<BallScript>()._protected = true;
+        _collected = true;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Enemy" && _collected)
         {
-            collision.collider.enabled = false;
+            Debug.Log("Shield hit an enemy: "+collider.name);
+            collider.enabled = false;
             _player.GetComponent<BallScript>()._protected = false;
-            DestroyImmediate(this);
+            Destroy(gameObject);
         }
+        
     }
 
 }
