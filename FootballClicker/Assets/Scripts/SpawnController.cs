@@ -59,7 +59,7 @@ public class SpawnController : MonoBehaviour
             _gemCounter = 0f;
         }
 
-        if (_pickupCounter > 3f)
+        if (_pickupCounter > 30f)
         {
             Debug.Log("Spawning powerup");
             SpawnAPowerUp();
