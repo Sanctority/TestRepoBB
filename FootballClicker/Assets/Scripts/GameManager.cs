@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager _instance = null;
 
     // Public variables.
-
+    
 
     // Private variables
     private int _highscore;      // This will be used to store the current Highscore of the player.
@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
 
     private bool _canContinue;
     private bool _continue;     //maybe change this
+
+    private bool _isConnectedToTheInternet;
 
     private void Awake()
     {
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour {
 
         _highscore = PlayerPrefs.GetInt("Highscore");       // Gets the current saved highscore and stores it in the variable.
         _coins = PlayerPrefs.GetInt("Coins");
-        _gems = PlayerPrefs.GetInt("Gems");
+        //_gems = PlayerPrefs.GetInt("Gems");
     }
 
     private void Update()
@@ -174,6 +176,11 @@ public class GameManager : MonoBehaviour {
     public bool GetCanContinue()
     {
         return _canContinue;
+    }
+
+    public void ChangeInternetBool(bool ConnectedOrNot)
+    {
+        _isConnectedToTheInternet = ConnectedOrNot;
     }
 
     #endregion get and set functions end
