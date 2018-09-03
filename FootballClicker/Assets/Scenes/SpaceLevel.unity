@@ -391,6 +391,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114059981478836828, guid: 0816ad6b8be976141882224a03652e8a,
+        type: 2}
+      propertyPath: _uiCanvas
+      value: 
+      objectReference: {fileID: 1206513863}
     - target: {fileID: 114989991271080678, guid: 0816ad6b8be976141882224a03652e8a,
         type: 2}
       propertyPath: _uiCanvas
@@ -402,11 +407,6 @@ Prefab:
       value: 
       objectReference: {fileID: 1206513863}
     - target: {fileID: 114513019216962282, guid: 0816ad6b8be976141882224a03652e8a,
-        type: 2}
-      propertyPath: _uiCanvas
-      value: 
-      objectReference: {fileID: 1206513863}
-    - target: {fileID: 114059981478836828, guid: 0816ad6b8be976141882224a03652e8a,
         type: 2}
       propertyPath: _uiCanvas
       value: 
