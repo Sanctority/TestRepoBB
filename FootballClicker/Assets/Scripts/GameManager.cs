@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour {
 
     private bool _isConnectedToTheInternet;
 
+    private bool _playerOnlineStatus;
+
     private void Awake()
     {
         // Instance of game manager start.
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour {
 
         _highscore = PlayerPrefs.GetInt("Highscore");       // Gets the current saved highscore and stores it in the variable.
         _coins = PlayerPrefs.GetInt("Coins");
-        //_gems = PlayerPrefs.GetInt("Gems");
+        _gems = PlayerPrefs.GetInt("Gems");
     }
 
     private void Update()
@@ -184,4 +186,14 @@ public class GameManager : MonoBehaviour {
     }
 
     #endregion get and set functions end
+
+    public void PlayerIsOnline()
+    {
+        _playerOnlineStatus = true;
+    }
+
+    public void PlayerIsOffline()
+    {
+        _playerOnlineStatus = false;
+    }
 }
