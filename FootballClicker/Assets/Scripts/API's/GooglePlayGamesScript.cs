@@ -3,6 +3,7 @@ using GooglePlayGames.BasicApi;
 using UnityEngine;
 using GooglePlayGames.BasicApi.SavedGame;
 using System.Text;
+using System;
 
 
 
@@ -11,21 +12,10 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     public static GooglePlayGamesScript Instance { get; private set; }
 
-    const string _saveName = "BouncyBoySave";
-    const string _gemSave = "PlayersGems";
-
-    bool _isGemSaving;
-
-    bool _isGemCloudDataLoaded;
 
     private void Start()
     {
         Instance = this;
-
-        if (!PlayerPrefs.HasKey(_saveName))
-        {
-            PlayerPrefs.SetString(_saveName, "0");
-        }
 
         if (!PlayerPrefs.HasKey("FirstTimeSave"))
         {
@@ -111,7 +101,11 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     #endregion LeaderboardsEnd
 
-   
+    #region save
+
+
+
+    #endregion
 
 #endif
 }
