@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager _instance = null;
 
     // Public variables.
-
+    
 
     // Private variables
     private int _highscore;      // This will be used to store the current Highscore of the player.
@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour {
 
     private bool _canContinue;
     private bool _continue;     //maybe change this
+
+    private bool _isConnectedToTheInternet;
+
+    private bool _playerOnlineStatus;
 
     private void Awake()
     {
@@ -57,9 +61,9 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)||Input.anyKeyDown)
+        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)/*||Input.anyKeyDown*/)
         {
-            RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position/*Input.mousePosition*/), Vector2.zero);
             foreach (RaycastHit2D hit in hits)
             {
                 Debug.Log(hit.collider.tag);
@@ -176,5 +180,20 @@ public class GameManager : MonoBehaviour {
         return _canContinue;
     }
 
+    public void ChangeInternetBool(bool ConnectedOrNot)
+    {
+        _isConnectedToTheInternet = ConnectedOrNot;
+    }
+
     #endregion get and set functions end
+
+    public void PlayerIsOnline()
+    {
+        _playerOnlineStatus = true;
+    }
+
+    public void PlayerIsOffline()
+    {
+        _playerOnlineStatus = false;
+    }
 }

@@ -3,6 +3,7 @@ using GooglePlayGames.BasicApi;
 using UnityEngine;
 using GooglePlayGames.BasicApi.SavedGame;
 using System.Text;
+using System;
 
 
 
@@ -11,9 +12,15 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     public static GooglePlayGamesScript Instance { get; private set; }
 
+
     private void Start()
     {
         Instance = this;
+
+        if (!PlayerPrefs.HasKey("FirstTimeSave"))
+        {
+            PlayerPrefs.SetInt("FirstTimeSave", 1);
+        }
 
         PlayGamesPlatform.DebugLogEnabled = true;
 
@@ -30,7 +37,7 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     private void SignIn()
     {
-        Social.localUser.Authenticate(success => {});
+        Social.localUser.Authenticate(success => {  GameManager._instance.PlayerIsOnline();  });
     }
 
     public static bool CheckIfLoggedIn()
@@ -94,54 +101,11 @@ public class GooglePlayGamesScript : MonoBehaviour {
 
     #endregion LeaderboardsEnd
 
-    #region Saved Games
-
-    void ShowSelectUI()
-    {
-        uint maxNumToDisplay = 1;
-        bool allowCreateNew = false;
-        bool allowDelete = true;
-
-        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
-        savedGameClient.ShowSelectSavedGameUI("Select saved game",
-            maxNumToDisplay,
-            allowCreateNew,
-            allowDelete,
-            OnSavedGameSelected);
-    }
+    #region save
 
 
-    public void OnSavedGameSelected(SelectUIStatus status, ISavedGameMetadata game)
-    {
-        if (status == SelectUIStatus.SavedGameSelected)
-        {
-            // handle selected game save
-        }
-        else
-        {
-            // handle cancel or error
-        }
-    }
 
-    void OpenSavedGame(string filename)
-    {
-        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
-        savedGameClient.OpenWithAutomaticConflictResolution(filename, DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLongestPlaytime, OnSavedGameOpened);
-    }
+    #endregion
 
-    public void OnSavedGameOpened(SavedGameRequestStatus status, ISavedGameMetadata game)
-    {
-        if (status == SavedGameRequestStatus.Success)
-        {
-            // handle reading or writing of saved game.
-        }
-        else
-        {
-            // handle error
-        }
-    }
-
-    #endregion Saved Games End
 #endif
 }
