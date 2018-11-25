@@ -27,6 +27,8 @@ public class SpawnController : MonoBehaviour
 
     private float _levelTime;
 
+    private float _randomPowerupDropChanceTime;
+
     // Serialized so we can add prefabs.
     [SerializeField]
     private List<GameObject> _enemyPrefabList;      // This is a list of the avaliable enemys to be spawned
@@ -47,6 +49,7 @@ public class SpawnController : MonoBehaviour
 
         _gemCounter = 0f;
         _pickupCounter = 0f;
+        _randomPowerupDropChanceTime = Random.Range(15.0f, 25.0f);
     }
 
     void FixedUpdate()
@@ -59,11 +62,13 @@ public class SpawnController : MonoBehaviour
             _gemCounter = 0f;
         }
 
-        if (_pickupCounter > 3f)
+
+        if (_pickupCounter > _randomPowerupDropChanceTime)
         {
             Debug.Log("Spawning powerup");
             SpawnAPowerUp();
             _pickupCounter = 0f;
+            _randomPowerupDropChanceTime = Random.Range(15.0f, 25.0f);
         }
 
         _gemCounter += Time.deltaTime;
