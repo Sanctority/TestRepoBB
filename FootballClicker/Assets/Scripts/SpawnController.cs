@@ -18,6 +18,7 @@ public class SpawnController : MonoBehaviour
     private Vector2 _spawnPosition;
     private Quaternion _spawnRotation;
     private List<GameObject> _spawnedEnemyList;     // This will hold a reference to any enemys that have been spawned into the level.
+    private float _spawnPowerupTime;
 
     [SerializeField]
     private float _baseSpeed;
@@ -47,6 +48,7 @@ public class SpawnController : MonoBehaviour
 
         _gemCounter = 0f;
         _pickupCounter = 0f;
+        _spawnPowerupTime = Random.Range(15.0f, 25.0f);
     }
 
     void FixedUpdate()
@@ -59,11 +61,12 @@ public class SpawnController : MonoBehaviour
             _gemCounter = 0f;
         }
 
-        if (_pickupCounter > 3f)
+        if (_pickupCounter > _spawnPowerupTime)
         {
             Debug.Log("Spawning powerup");
             SpawnAPowerUp();
             _pickupCounter = 0f;
+            _spawnPowerupTime = Random.Range(15.0f, 25.0f);
         }
 
         _gemCounter += Time.deltaTime;
