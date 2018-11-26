@@ -272,8 +272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 266.14993, y: -78.25}
-  m_SizeDelta: {x: -532.3, y: -156.5}
+  m_AnchoredPosition: {x: 266, y: -63.25}
+  m_SizeDelta: {x: -747.8, y: -126.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193867327
 MonoBehaviour:
@@ -1084,6 +1084,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114653166514079854, guid: 92bce661755ea954ba1edd2fd377baa8,
+        type: 2}
+      propertyPath: _gemsCost
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92bce661755ea954ba1edd2fd377baa8, type: 2}
   m_IsPrefabAsset: 0
@@ -1219,6 +1224,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114201214749100306, guid: 9ff8078d751c38c4fb4938d79a3f5c32,
+        type: 2}
+      propertyPath: _gemsCost
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ff8078d751c38c4fb4938d79a3f5c32, type: 2}
   m_IsPrefabAsset: 0
@@ -1353,6 +1363,11 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668317566766146, guid: 2a788abae7a85f64788755a2f15a2e94,
+        type: 2}
+      propertyPath: _gemsCost
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a788abae7a85f64788755a2f15a2e94, type: 2}
@@ -1791,7 +1806,7 @@ MonoBehaviour:
     spaceCount: 2
     wordCount: 3
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1945,6 +1960,11 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114582148326541112, guid: c3a757c2b4ab1f14e9a520c59e41c8a9,
+        type: 2}
+      propertyPath: _gemsCost
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a757c2b4ab1f14e9a520c59e41c8a9, type: 2}
