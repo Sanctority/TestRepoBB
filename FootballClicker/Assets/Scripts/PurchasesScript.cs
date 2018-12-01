@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using System;
+using UnityEngine.UI;
+using TMPro;
 
 
     public class PurchasesScript : MonoBehaviour, IStoreListener
     {
+        private GameManager _gameManager;
+        public TextMeshProUGUI _gems;
+
         private static IStoreController m_StoreController;          // The Unity Purchasing system.
         private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
 
-        public static string Gems100 = "consumable";
-        public static string Gems250 = "nonconsumable";
-        public static string Gems500 = "subscription";
+        public static string Gems50 = "gem50";
+        public static string Gems250 = "gem250";
+        public static string Gems500 = "gem500";
 
         // Apple App Store-specific product identifier for the subscription product.
         private static string kProductNameAppleSubscription = "com.unity3d.subscription.new";
@@ -28,7 +33,10 @@ using System;
                 // Begin to configure our connection to Purchasing
                 InitializePurchasing();
             }
-        }
+
+        _gameManager = GameManager._instance;
+        UpdateGemsText();
+    }
 
         public void InitializePurchasing()
         {
@@ -43,7 +51,7 @@ using System;
             var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
 
-            builder.AddProduct(Gems100, ProductType.Consumable);
+            builder.AddProduct(Gems50, ProductType.Consumable);
             builder.AddProduct(Gems250, ProductType.Consumable);
             builder.AddProduct(Gems500, ProductType.Consumable);
 
@@ -60,9 +68,9 @@ using System;
         }
 
 
-        public void Buy100Gems()
+        public void Buy50Gems()
         {
-            BuyProductID(Gems100);
+            BuyProductID(Gems50);
         }
 
         public void Buy250Gems()
@@ -172,18 +180,24 @@ using System;
 
         public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
         {
-            if (String.Equals(args.purchasedProduct.definition.id, Gems100, StringComparison.Ordinal))
+            if (String.Equals(args.purchasedProduct.definition.id, Gems50, StringComparison.Ordinal))
             {
-                
+            _gameManager.UpdateGems(50);
+            UpdateGemsText();
+            Debug.Log("50 Gems have been purchased");
             }
             else if (String.Equals(args.purchasedProduct.definition.id, Gems250, StringComparison.Ordinal))
             {
-                
-            }
+            _gameManager.UpdateGems(250);
+            UpdateGemsText();
+            Debug.Log("250 Gems have been purchased");
+        }
             else if (String.Equals(args.purchasedProduct.definition.id, Gems500, StringComparison.Ordinal))
             {
-                
-            }
+            _gameManager.UpdateGems(500);
+            UpdateGemsText();
+            Debug.Log("500 Gems have been purchased");
+        }
             // Or ... an unknown product has been purchased by this user. Fill in additional products here....
             else
             {
@@ -203,4 +217,9 @@ using System;
             // this reason with the user to guide their troubleshooting actions.
             Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
         }
+
+    public void UpdateGemsText()
+    {
+        _gems.text = "Gems = " + _gameManager.ReturnGems().ToString();
+    }
     }

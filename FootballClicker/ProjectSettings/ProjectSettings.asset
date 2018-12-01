@@ -154,7 +154,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.GEMSTUDIOS.BOUNCYBOY
   buildNumber: {}
-  AndroidBundleVersionCode: 9
+  AndroidBundleVersionCode: 10
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
