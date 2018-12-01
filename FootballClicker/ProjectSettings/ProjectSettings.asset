@@ -154,7 +154,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.GEMSTUDIOS.BOUNCYBOY
   buildNumber: {}
-  AndroidBundleVersionCode: 7
+  AndroidBundleVersionCode: 9
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -243,7 +243,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Jonathan/Desktop/FootballClickerKeystore.keystore
+  AndroidKeystoreName: C:/Users/John Smith/Desktop/FootballClickerKeystore.keystore
   AndroidKeyaliasName: footballclickerkey
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
