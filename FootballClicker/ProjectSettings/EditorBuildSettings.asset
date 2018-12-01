@@ -23,3 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: b34be065f14481c4f8d2cb616090e59b
+  - enabled: 1
+    path: Assets/Scenes/BuyGems.unity
+    guid: 0fa1867c83bcd1045a9cbc708e7cf6a1
+  m_configObjects: {}
