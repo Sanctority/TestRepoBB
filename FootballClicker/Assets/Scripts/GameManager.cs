@@ -151,11 +151,14 @@ public class GameManager : MonoBehaviour {
     {
         if ((PlayerPrefs.GetInt("Gems") - num) < 0)
         {
+            Debug.Log("No gems removed");
             return false;
         }
         else
         {
-            PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") + num);
+            PlayerPrefs.SetInt("Gems", PlayerPrefs.GetInt("Gems") - num);
+            _gems = PlayerPrefs.GetInt("Gems");
+            Debug.Log("Gems removed");
             return true;
         }
     }

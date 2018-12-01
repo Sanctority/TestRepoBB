@@ -9,6 +9,8 @@ public class ItemChecker : MonoBehaviour {
     public int _coinsCost;
     public int _gemsCost;
 
+    public TextMeshProUGUI _secondButtonText;
+
     [SerializeField]
     private bool _costsCoinsToBuyItem;
 
@@ -24,6 +26,10 @@ public class ItemChecker : MonoBehaviour {
     private void Start()
     {
         UpdateText();
+
+        //PlayerPrefs.SetInt("SpikeBall", 0);
+        //PlayerPrefs.SetInt("BombBall", 0);
+        //PlayerPrefs.SetInt("DivingBall", 0);
     }
 
     public void UpdateText()
@@ -35,10 +41,12 @@ public class ItemChecker : MonoBehaviour {
             if(PlayerPrefs.GetString("Equipped") == _chosenID.ToString())
             {
                 _txtBuyItem.text = "Equipped";
+                _secondButtonText.text = "Equipped";
             }
             else
             {
                 _txtBuyItem.text = "Equip";
+                _secondButtonText.text = "Equip";
             }
             
         }
