@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager _instance = null;
 
     // Public variables.
-
+    
 
     // Private variables
     private int _highscore;      // This will be used to store the current Highscore of the player.
@@ -19,13 +19,10 @@ public class GameManager : MonoBehaviour {
     private bool _canContinue;
     private bool _continue;     //maybe change this
 
-<<<<<<< HEAD
     private bool _isConnectedToTheInternet;
 
     private bool _playerOnlineStatus;
 
-=======
->>>>>>> parent of de98bc4... cloud save added
     private void Awake()
     {
         // Instance of game manager start.
@@ -184,6 +181,11 @@ public class GameManager : MonoBehaviour {
     public bool GetCanContinue()
     {
         return _canContinue;
+    }
+
+    public void ChangeInternetBool(bool ConnectedOrNot)
+    {
+        _isConnectedToTheInternet = ConnectedOrNot;
     }
 
     #endregion get and set functions end
