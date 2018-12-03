@@ -151,12 +151,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-<<<<<<< HEAD
   applicationIdentifier:
     Android: com.GEMSTUDIOS.BOUNCYBOY
-=======
-  applicationIdentifier: {}
->>>>>>> parent of de98bc4... cloud save added
   buildNumber: {}
   AndroidBundleVersionCode: 10
   AndroidMinSdkVersion: 16
@@ -247,8 +243,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Jonathan/Desktop/FootballClickerKeystore.keystore
+  AndroidKeyaliasName: footballclickerkey
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -262,7 +258,6 @@ PlayerSettings:
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons: []
-<<<<<<< HEAD
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
@@ -356,9 +351,6 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-=======
-  m_BuildTargetPlatformIcons: []
->>>>>>> parent of de98bc4... cloud save added
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
