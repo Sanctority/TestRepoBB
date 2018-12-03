@@ -19,13 +19,6 @@ public class GameManager : MonoBehaviour {
     private bool _canContinue;
     private bool _continue;     //maybe change this
 
-<<<<<<< HEAD
-    private bool _isConnectedToTheInternet;
-
-    private bool _playerOnlineStatus;
-
-=======
->>>>>>> parent of de98bc4... cloud save added
     private void Awake()
     {
         // Instance of game manager start.
@@ -188,13 +181,4 @@ public class GameManager : MonoBehaviour {
 
     #endregion get and set functions end
 
-    public void PlayerIsOnline()
-    {
-        _playerOnlineStatus = true;
-    }
-
-    public void PlayerIsOffline()
-    {
-        _playerOnlineStatus = false;
-    }
 }
